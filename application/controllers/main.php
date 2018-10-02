@@ -1,6 +1,11 @@
 <?php
-class controleurAccueil extends CI_Controller{
+class Main extends CI_Controller{
+
     public function index(){
+        $this->load->view("login");
+    }
+
+    public function home(){
         $this->load->model("modelOffres");
         $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser();
         $this->load->model("modelUser");
@@ -9,6 +14,7 @@ class controleurAccueil extends CI_Controller{
         $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser();
         $this->load->view("viewAccueil.php",$data);
     }
+
 }
 
 ?>
