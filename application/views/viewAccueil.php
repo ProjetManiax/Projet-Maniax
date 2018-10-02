@@ -16,9 +16,9 @@
 		<a href="#" class="logo">NOM PRENOM PHOTO</a>
 		<nav class="menu">
 			<a href="#"> Accueil </a>
-			<a href="#about"> Offres </a>
-			<a href="#join"> Demandes </a>
-			<a href="#staff"> Deals </a>
+			<a href="#"> Offres </a>
+			<a href="#"> Demandes </a>
+			<a href="#"> Deals </a>
 			<a href="#"> Deconnexion </a>
 		</nav>
 	</header>
@@ -48,7 +48,13 @@
 
     <h1>Mes Deals</h1>
     <p>Voici la liste de ce que j'ai échangé</p>
-    <div id="divMesDeals"></div>
+    <div id="divMesDeals">    <?php
+        foreach($lesDeals as $unDeal){
+        ?> <p><?php echo $unDeal->nomService." ".$unDeal->dateDemande." ".$unDeal->descriptionDemande ?></p>
+        <?php    
+        }
+
+    ?></div>
     <p></p>
 
     <br>
