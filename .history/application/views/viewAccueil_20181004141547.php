@@ -15,7 +15,7 @@
 		<a href="#" class="logo">NOM PRENOM PHOTO</a>
 		<nav class="menu">
 			<a href="#"> Accueil </a>
-			<a href="#divOffres"> Offres </a>
+			<a href="#"> Offres </a>
 			<a href="#divDemandes"> Demandes </a>
 			<a href="#divMesDeals"> Deals </a>
 			<a href="user_logout"> Deconnexion </a>

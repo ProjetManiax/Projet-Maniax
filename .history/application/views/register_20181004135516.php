@@ -45,7 +45,7 @@
 
                           </fieldset>
                       </form><br>
-                      <center><h4>Déjà inscrit ?</h4><b></b></b><a href="<?php echo base_url('user/login_view'); ?>">Connexion ici</a></center><!--for centered text-->
+                      <center><h4>Déjà inscrit ?</h4><b></b></b><a href="<?php echo base_url('user/login_user'); ?>">Connexion ici</a></center><!--for centered text-->
                   </div>
               </div>
           </div>

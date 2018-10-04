@@ -82,7 +82,7 @@ function login_user(){
         $this->session->set_userdata('login',$data['login']);
         $this->session->set_userdata('photoUser',$data['photoUser']);
 
-        redirect('user/home');
+        redirect('main/home');
 
       }
       else{

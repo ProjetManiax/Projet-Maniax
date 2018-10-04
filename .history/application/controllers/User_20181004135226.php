@@ -13,7 +13,7 @@ public function __construct(){
 
 public function index()
 {
-$this->load->view("login.php");
+$this->load->view("register.php");
 }
 
 public function home(){
@@ -60,12 +60,6 @@ public function login_view(){
 
 }
 
-public function register_view(){
-
-  $this->load->view("register.php");
-
-}
-
 function login_user(){
   $user_login=array(
 
@@ -82,7 +76,7 @@ function login_user(){
         $this->session->set_userdata('login',$data['login']);
         $this->session->set_userdata('photoUser',$data['photoUser']);
 
-        redirect('user/home');
+        redirect('main/home');
 
       }
       else{

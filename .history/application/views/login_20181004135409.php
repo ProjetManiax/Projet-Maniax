@@ -49,7 +49,7 @@
 
                         </fieldset>
                     </form><br><br>
-                <center><b><h4>Pas inscrit ?</h4></b><a href="<?php echo base_url('user/register_view'); ?>">Inscription ici</a></center>
+                <center><b><h4>Pas inscrit ?</h4></b><a href="<?php echo base_url('user/register_user'); ?>">Inscription ici</a></center>
 
                 </div>
             </div>
