@@ -83,6 +83,7 @@ function login_user(){
         $this->session->set_userdata('photoUser',$data['photoUser']);
 
         redirect('user/home');
+        
 
       }
       else{

@@ -21,40 +21,43 @@
 			<a href="user_logout"> Deconnexion </a>
 		</nav>
 	</header>
-    <h1>Mes Offres</h1>
-    <p>Voici la liste de ce que je propose</p>
-    <div id="divOffres">    <?php
-        foreach($lesOffres as $uneOffre){
-        ?> <p><?php echo $uneOffre->nomService." ".$uneOffre->dateOffre." ".$uneOffre->descriptionOffre ?></p>
-        <?php    
-        }
-
-    ?>
-</div>
-    <br>
-
-    <h1>Mes Demandes</h1>
-    <p>Voici ce dont j'ai besoin</p>
-    <div id="divDemandes">    <?php
-        foreach($lesDemandes as $uneDemande){
-        ?> <p><?php echo $uneDemande->nomService." ".$uneDemande->dateDemande." ".$uneDemande->descriptionDemande ?></p>
-        <?php    
-        }
-
-    ?></div>
-
-    <br>
-
-    <h1>Mes Deals</h1>
-    <p>Voici la liste de ce que j'ai échangé</p>
-    <div id="divMesDeals">    <?php
-        foreach($lesDeals as $unDeal){
-        ?> <p><?php echo $unDeal->nomService." ".$unDeal->dateDemande." ".$unDeal->descriptionDemande ?></p>
-        <?php    
-        }
-
-    ?></div>
-    <p></p>
+    <section class="container-fluid about">
+        <div class="container">
+        <div class="row">
+        <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+            <h1>Mes Offres</h1>
+            <p>Voici la liste de ce que je propose</p>
+            <div id="divOffres">    
+            <?php foreach($lesOffres as $uneOffre){
+                ?> <p><?php echo $uneOffre->nomService." ".$uneOffre->dateOffre." ".$uneOffre->descriptionOffre ?></p>
+                <?php    
+            }
+            ?>
+            </div>
+        </article>
+    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+        <h1>Mes Demandes</h1>
+        <p>Voici ce dont j'ai besoin</p>
+        <div id="divDemandes">    
+            <?php foreach($lesDemandes as $uneDemande){
+                ?> <p><?php echo $uneDemande->nomService." ".$uneDemande->dateDemande." ".$uneDemande->descriptionDemande ?></p>
+                <?php    
+            }
+            ?>
+            </div>
+    </article>
+    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+        <h1>Mes Deals</h1>
+        <p>Voici la liste de ce que j'ai échangé</p>
+        <div id="divMesDeals">
+            <?php $nomU=$this->session->set_userdata('nomUser'); echo $nomU; ?>
+        </div>
+    </article>
+        
+        </div>
+        </div>
+    </section>
+    
 
     <br>
 </body>
