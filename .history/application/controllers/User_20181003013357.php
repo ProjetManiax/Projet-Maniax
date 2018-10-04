@@ -36,7 +36,7 @@ if($login_check){
 }
 else{
 
-  $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
+  $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
   redirect('user');
 
 
@@ -53,24 +53,25 @@ public function login_view(){
 function login_user(){
   $user_login=array(
 
-  'login'=>$this->input->post('login'),
-  'mdp'=>$this->input->post('mdp')
+  'user_email'=>$this->input->post('user_email'),
+  'user_password'=>md5($this->input->post('user_password'))
 
     );
 
-    $data=$this->user_model->login_user($user_login['login'],$user_login['mdp']);
+    $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
       if($data)
       {
-        $this->session->set_userdata('idUser',$data['idUser']);
-        $this->session->set_userdata('nomUser',$data['nomUser']);
-        $this->session->set_userdata('login',$data['login']);
-        $this->session->set_userdata('photoUser',$data['photoUser']);
+        $this->session->set_userdata('user_id',$data['user_id']);
+        $this->session->set_userdata('user_email',$data['user_email']);
+        $this->session->set_userdata('user_name',$data['user_name']);
+        $this->session->set_userdata('user_age',$data['user_age']);
+        $this->session->set_userdata('user_mobile',$data['user_mobile']);
 
-        redirect('main/home');
+        $this->load->view('user_profile.php');
 
       }
       else{
-        $this->session->set_flashdata('error_msg',  "Une erreur s'est produite, essayez à nouveau.");
+        $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
         $this->load->view("login.php");
 
       }

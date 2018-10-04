@@ -12,14 +12,14 @@ class User_model extends CI_model{
 
   public function login_user($login,$mdp){
 
-    $this->db->select('idUser','nomUser', 'login', 'photoUser');
+    $this->db->select('*');
     $this->db->from('user');
     $this->db->where('login',$login);
     $this->db->where('mdp',$mdp);
 
     if($query=$this->db->get())
     {
-      return $query->row_array();
+        return $query->row_array();
     }
     else{
       return false;

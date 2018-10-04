@@ -27,7 +27,7 @@
                   }
                    ?>
                     <br><br>
-                      <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
+                      <form role="form" method="post" action="user/register_user">
                           <fieldset>
                               <div class="form-group">
                                   <input class="form-control" placeholder="Nom + Prénom" name="nomUser" type="text" autofocus>
@@ -45,7 +45,7 @@
 
                           </fieldset>
                       </form><br>
-                      <center><h4>Déjà inscrit ?</h4><b></b></b><a href="<?php echo base_url('main'); ?>">Connexion ici</a></center><!--for centered text-->
+                      <center><h4>Déjà inscrit ?</h4><b></b></b><a href="javascript:document.location.href='main.php'">Connexion ici</a></center><!--for centered text-->
                   </div>
               </div>
           </div>

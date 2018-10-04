@@ -27,7 +27,7 @@
                   }
                    ?>
                     <br><br>
-                      <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
+                      <form role="form" method="post" action="user/register_user">
                           <fieldset>
                               <div class="form-group">
                                   <input class="form-control" placeholder="Nom + Prénom" name="nomUser" type="text" autofocus>

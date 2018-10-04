@@ -35,7 +35,7 @@
                   ?>
                   <br><br>
                 <div class="panel-body">
-                    <form role="form" method="post" action="<?php echo base_url('user/login_user'); ?>">
+                    <form role="form" method="post" action="index.php/user/login_user">
                         <fieldset>
                             <div class="form-group"  >
                                 <input class="form-control" placeholder="Login" name="login" type="text" autofocus>
@@ -45,11 +45,11 @@
                             </div><br><br>
 
 
-                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Connexion" name="connexion" >
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Connexion" name="login" >
 
                         </fieldset>
                     </form><br><br>
-                <center><b><h4>Pas inscrit ?</h4></b><a href="<?php echo base_url('user'); ?>">Inscription ici</a></center>
+                <center><b><h4>Pas inscrit ?</h4></b><a href="<?php echo  base_url ('user') ?>">Inscription ici</a></center>
 
                 </div>
             </div>

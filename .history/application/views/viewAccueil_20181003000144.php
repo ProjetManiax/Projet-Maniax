@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Accueil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='../jQuery/jquery-3.1.1.js'></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styleAccueil.css">
+    <script src='jQuery/jquery-3.1.1.js'></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleAccueil.css">
 </head>
 <body>
     <header class="container-fluid header">
