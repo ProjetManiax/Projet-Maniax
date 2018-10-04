@@ -111,7 +111,6 @@ public function user_logout(){
 }
 
 public function getId(){
-  
   echo $_SESSION['idUser'];
 }
 

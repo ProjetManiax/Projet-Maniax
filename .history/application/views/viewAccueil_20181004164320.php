@@ -47,9 +47,7 @@
 
     <h1>Mes Deals</h1>
     <p>Voici la liste de ce que j'ai échangé</p>
-    <div id="divMesDeals">
-    
-    </div>
+    <div id="divMesDeals"></div>
     <p></p>
 
     <br>

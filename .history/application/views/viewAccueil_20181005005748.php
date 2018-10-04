@@ -48,7 +48,7 @@
     <h1>Mes Deals</h1>
     <p>Voici la liste de ce que j'ai échangé</p>
     <div id="divMesDeals">
-    
+    <a href="user/getId"></a>
     </div>
     <p></p>
 

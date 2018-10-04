@@ -16,17 +16,13 @@ public function index()
 $this->load->view("login.php");
 }
 
-public function testSession(){
-
-}
-
 public function home(){
   $this->load->model("modelOffres");
-  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
+  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser();
   $this->load->model("modelUser");
-  $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
+  $data["lesUsers"]=$this->modelUser->getUser(1);
   $this->load->model("modelDemandes");
-  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
+  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser();
   $this->load->view("viewAccueil.php",$data);
 }
 
@@ -81,17 +77,16 @@ function login_user(){
     $data=$this->user_model->login_user($user_login['login'],$user_login['mdp']);
       if($data)
       {
-        $_SESSION['idUser']=$data['idUser'];
-        $_SESSION['nomUser']=$data['nomUser'];
-        $_SESSION['login']=$data['login'];
-        $_SESSION['photoUser']=$data['photoUser'];
+        $this->session->set_userdata('idUser',$data['idUser']);
+        $this->session->set_userdata('nomUser',$data['nomUser']);
+        $this->session->set_userdata('login',$data['login']);
+        $this->session->set_userdata('photoUser',$data['photoUser']);
 
-        redirect('user/home');
-   
+        $this->load->view("viewAccueil");
 
       }
       else{
-        $this->session->set_flashdata('error_msg',  "Login ou mot de passe incorrect !");
+        $this->session->set_flashdata('error_msg',  "Une erreur s'est produite, essayez à nouveau.");
         $this->load->view("login.php");
 
       }
@@ -108,11 +103,6 @@ public function user_logout(){
 
   $this->session->sess_destroy();
   redirect('user/login_view', 'refresh');
-}
-
-public function getId(){
-  
-  echo $_SESSION['idUser'];
 }
 
 }

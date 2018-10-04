@@ -22,11 +22,11 @@ public function testSession(){
 
 public function home(){
   $this->load->model("modelOffres");
-  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
+  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser();
   $this->load->model("modelUser");
-  $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
+  $data["lesUsers"]=$this->modelUser->getUser(1);
   $this->load->model("modelDemandes");
-  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
+  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser();
   $this->load->view("viewAccueil.php",$data);
 }
 
@@ -81,11 +81,13 @@ function login_user(){
     $data=$this->user_model->login_user($user_login['login'],$user_login['mdp']);
       if($data)
       {
-        $_SESSION['idUser']=$data['idUser'];
-        $_SESSION['nomUser']=$data['nomUser'];
-        $_SESSION['login']=$data['login'];
-        $_SESSION['photoUser']=$data['photoUser'];
-
+        $sessionData = array(
+          'idUser'  => $data['idUser'],
+          'nomUser'     => $data['nomUser'],
+          'login' => $data['login'],
+          'photoUser' => $data['photoUser']
+        );
+        $this->session->set_userdata($sessionData);
         redirect('user/home');
    
 
@@ -108,11 +110,6 @@ public function user_logout(){
 
   $this->session->sess_destroy();
   redirect('user/login_view', 'refresh');
-}
-
-public function getId(){
-  
-  echo $_SESSION['idUser'];
 }
 
 }

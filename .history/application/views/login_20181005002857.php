@@ -41,7 +41,7 @@
                                 <input class="form-control" placeholder="Login" name="login" type="text" required autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="" >
+                                <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="" required>
                             </div><br><br>
 
 

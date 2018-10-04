@@ -38,10 +38,10 @@
                     <form role="form" method="post" action="<?php echo base_url('user/login_user'); ?>">
                         <fieldset>
                             <div class="form-group"  >
-                                <input class="form-control" placeholder="Login" name="login" type="text" required autofocus>
+                                <input class="form-control" placeholder="Login" name="login" type="text" data-rule="minlen:4" data-msg="Veuillez entrer au moins 3 caractères" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="" >
+                                <input class="form-control" placeholder="Mot de passe" name="mdp" type="password" value="" data-rule="required" data-msg="Veuillez entrer un mot de passe">
                             </div><br><br>
 
 

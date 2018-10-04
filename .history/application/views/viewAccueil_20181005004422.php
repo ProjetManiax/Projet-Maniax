@@ -48,7 +48,7 @@
     <h1>Mes Deals</h1>
     <p>Voici la liste de ce que j'ai échangé</p>
     <div id="divMesDeals">
-    
+    <?php echo $this->session->set_userdata($sessionData);?>
     </div>
     <p></p>
 

@@ -48,7 +48,7 @@
     <h1>Mes Deals</h1>
     <p>Voici la liste de ce que j'ai échangé</p>
     <div id="divMesDeals">
-    
+    <h1><?php $_SESSION['idUser'] ?></h1>
     </div>
     <p></p>
 
