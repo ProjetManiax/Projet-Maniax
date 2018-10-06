@@ -12,48 +12,90 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		<a href="#" class="logo">NOM PRENOM PHOTO</a>
-		<nav class="menu">
+		    <a href="#" class="logo">NOM PRENOM PHOTO</a>
+		    <nav class="menu">
 			<a href="#"> Accueil </a>
-			<a href="#divOffres"> Offres </a>
-			<a href="#divDemandes"> Demandes </a>
-			<a href="#divMesDeals"> Deals </a>
+			<a href="#retOffres"> Offres </a>
+			<a href="#retDemandes"> Demandes </a>
+			<a href="#retDeals"> Deals </a>
 			<a href="user_logout"> Deconnexion </a>
 		</nav>
+        </div>
 	</header>
     <section class="container-fluid about">
         <div class="container">
-        <div class="row">
+        <div id="retOffres">
         <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-            <h1>Mes Offres</h1>
+            <div id="retOffres">
+            <h1>Mes Offres <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
+            </div>
+            <br>
             <p>Voici la liste de ce que je propose</p>
             <div id="divOffres">    
             <?php foreach($lesOffres as $uneOffre){
-                ?> <p><?php echo $uneOffre->nomService." ".$uneOffre->dateOffre." ".$uneOffre->descriptionOffre ?></p>
-                <?php    
-            }
-            ?>
+                ?><br>
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title"><?php echo $uneOffre->nomService?></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
+                <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
+                </div>
+                </div>
+            <?php } ?>
+            
             </div>
         </article>
     <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-        <h1>Mes Demandes</h1>
+        <br><br>
+        <div id="retDemandes">
+        <h1>Mes Demandes <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
+        </div>
+        <br>
         <p>Voici ce dont j'ai besoin</p>
+        <br>
         <div id="divDemandes">    
             <?php foreach($lesDemandes as $uneDemande){
-                ?> <p><?php echo $uneDemande->nomService." ".$uneDemande->dateDemande." ".$uneDemande->descriptionDemande ?></p>
-                <?php    
-            }
-            ?>
+                ?><br>
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title"><?php echo $uneDemande->nomService?></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
+                <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
+                </div>
+                </div>
+            <?php } ?>
+            
             </div>
     </article>
+    <div class="row">
     <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-        <h1>Mes Deals</h1>
-        <p>Voici la liste de ce que j'ai échangé</p>
-        <div id="divMesDeals">
-            <?php $nomU=$this->session->set_userdata('nomUser'); echo $nomU; ?>
+        <br><br>
+        <div id="retDeals">
+        <h1>Mes Deals <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
-    </article>
-        
+        <br>
+        <p>Voici la liste de ce que j'ai échangé</p>
+        <br>
+        <div id="divMesDeals">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+        </div>
+    </article>        
         </div>
         </div>
     </section>
