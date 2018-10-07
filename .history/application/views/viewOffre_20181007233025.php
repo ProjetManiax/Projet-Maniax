@@ -11,7 +11,7 @@
 <div class='container'>
     <h1 align=center>Création d'une nouvelle offre</h1><br><br>
     <div class='row'>
-        <div class='col-sm-6'><br>
+        <div class='col-sm-6'>br
             <img class="" src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" alt="">           
         </div>
         <div class='col-sm-6'>

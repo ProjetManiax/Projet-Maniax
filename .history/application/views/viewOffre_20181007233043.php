@@ -8,7 +8,7 @@
     <title>Ajout d'une offre</title><br><br><br>
 </head>
 <body>
-<div class='container'>
+<div class='container-fluid'>
     <h1 align=center>Création d'une nouvelle offre</h1><br><br>
     <div class='row'>
         <div class='col-sm-6'><br>

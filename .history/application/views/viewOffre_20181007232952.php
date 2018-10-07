@@ -11,10 +11,10 @@
 <div class='container'>
     <h1 align=center>Création d'une nouvelle offre</h1><br><br>
     <div class='row'>
-        <div class='col-sm-6'><br>
+        <div class='col-sm-6'>
             <img class="" src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" alt="">           
         </div>
-        <div class='col-sm-6'>
+        <div class='col-sm-6'><br>
             <form role="form" method="post" action="<?php echo base_url('user/register_offre'); ?>">
                     <fieldset>
                         <div class="form-group">
