@@ -103,9 +103,9 @@ function login_user(){
 
 }
 
-function adOffre_view(){
+function user_profile(){
 
-$this->load->view('viewOffre.php');
+$this->load->view('user_profile.php');
 
 }
 public function user_logout(){

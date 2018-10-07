@@ -22,7 +22,7 @@
 		</nav>
 	</header>
     <div id="divOffres">
-    <u><h1>Mes Offres <a href="adOffre_view"><button class="addButton" value="">+</button></a></h1></u>
+    <u><h1>Mes Offres $nbsp;<button class="addButton" value="">+</button></h1></u>
     <p>Voici la liste de ce que je propose</p>
         <?php
         foreach($lesOffres as $uneOffre){

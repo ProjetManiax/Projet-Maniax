@@ -27,10 +27,8 @@ public function home(){
   $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
   $this->load->model("modelDemandes");
   $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
-  $this->load->model("modelDeals");
-  $data["lesDeals"]=$this->modelDeals->getAllDealsByIdUser($_SESSION['idUser']);
-  $data["nomUser"]=$_SESSION['nomUser'];
-  $data["photoUser"]=$_SESSION['photoUser'];
+  $data["idUser"]=$_SESSION['idUser'];
+  $date["photoUser"]=$_SESSION['photoUser'];
   $this->load->view("viewAccueil.php",$data);
 }
 
@@ -48,7 +46,7 @@ $login_check=$this->user_model->login_check($user['login']);
 
 if($login_check){
   $this->user_model->register_user($user);
-  $this->session->set_flashdata('success_msg', 'Inscription réussie ! Vous pouvez vous connectez à votre compte.');
+  $this->session->set_flashdata('success_msg', 'Inscription réussie ! .Vous pouvez vous connectez à votre compte.');
   redirect('user/login_view');
 
 }
@@ -103,9 +101,9 @@ function login_user(){
 
 }
 
-function adOffre_view(){
+function user_profile(){
 
-$this->load->view('viewOffre.php');
+$this->load->view('user_profile.php');
 
 }
 public function user_logout(){
@@ -114,9 +112,9 @@ public function user_logout(){
   redirect('user/login_view', 'refresh');
 }
 
-public function getNom(){
+public function getId(){
   
-  echo $_SESSION['photoUser'];
+  echo $_SESSION['idUser'];
 }
 
 }

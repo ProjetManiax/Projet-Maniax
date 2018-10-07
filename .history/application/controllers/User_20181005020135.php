@@ -27,8 +27,6 @@ public function home(){
   $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
   $this->load->model("modelDemandes");
   $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
-  $this->load->model("modelDeals");
-  $data["lesDeals"]=$this->modelDeals->getAllDealsByIdUser($_SESSION['idUser']);
   $data["nomUser"]=$_SESSION['nomUser'];
   $data["photoUser"]=$_SESSION['photoUser'];
   $this->load->view("viewAccueil.php",$data);
@@ -103,9 +101,9 @@ function login_user(){
 
 }
 
-function adOffre_view(){
+function user_profile(){
 
-$this->load->view('viewOffre.php');
+$this->load->view('user_profile.php');
 
 }
 public function user_logout(){

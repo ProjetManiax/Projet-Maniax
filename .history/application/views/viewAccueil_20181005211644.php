@@ -21,10 +21,9 @@
 			<a href="user_logout"> Deconnexion </a>
 		</nav>
 	</header>
-    <div id="divOffres">
-    <u><h1>Mes Offres <a href="adOffre_view"><button class="addButton" value="">+</button></a></h1></u>
+    <u><h1>Mes Offres</h1></u>
     <p>Voici la liste de ce que je propose</p>
-        <?php
+    <div id="divOffres">    <?php
         foreach($lesOffres as $uneOffre){
         ?> <p><?php echo $uneOffre->nomService." ".$uneOffre->descriptionOffre." ".$uneOffre->dateOffre ?></p>
         <?php    
@@ -33,12 +32,12 @@
     ?>
 </div>
     <br>
-    <div id="divDemandes">
+
     <u><h1>Mes Demandes</h1></u>
     <p>Voici ce dont j'ai besoin</p>
-        <?php
+    <div id="divDemandes">    <?php
         foreach($lesDemandes as $uneDemande){
-        ?> <p><?php echo $uneDemande->nomService." ".$uneDemande->descriptionDemande." ".$uneDemande->dateDemande ?></p>
+        ?> <p><?php echo $uneDemande->nomService." ".$uneDemande->dateDemande." ".$uneDemande->descriptionDemande ?></p>
         <?php    
         }
 
