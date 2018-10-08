@@ -121,10 +121,6 @@ public function user_logout(){
   redirect('user/login_view', 'refresh');
 }
 
-public function getNom(){
-  
-  echo $_SESSION['photoUser'];
-}
 
 }
 
