@@ -61,52 +61,25 @@ public function register_user(){
 public function register_offre(){
 
   $offre=array(
-  'idOffre'=>$this->input->post('idOffre'),
-  'descriptionOffre'=>$this->input->post('descriptionOffre'),
-  'dateOffre'=>$this->input->post('dateOffre'),
+  'idOffre'=>$this->input->post('nomUser'),
+  'descriptionOffre'=>$this->input->post('login'),
+  'dateOffre'=>$this->input->post('mdp'),
   'idService'=>1/*$this->input->post('idService')*/,
   'idUser'=>$_SESSION['idUser'],
 
     );
     print_r($offre);
 
-  $register_offre=true/*$this->modelOffres->register_offre($offre)*/;
+  $register_offre=$this->modelOffres->register_offre($offre);
 
   if($register_offre){
-    $this->load->model("modelOffres");
-    $this->modelOffres->register_offre($offre);
-    $this->session->set_flashdata('success_msg', "Création de l'offre réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-    redirect('user/adOffre_view');
+    $this->session->set_flashdata('success_msg', "Création de l'offre réussie !");
+    redirect('user/home');
   }
   else{
     $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
     redirect('user/adOffre_view');
   }
-}
-  public function register_demande(){
-
-    $demande=array(
-    'idDemande'=>$this->input->post('idDemande'),
-    'descriptionDemande'=>$this->input->post('descriptionDemande'),
-    'dateDemande'=>$this->input->post('dateDemande'),
-    'idService'=>1/*$this->input->post('idService')*/,
-    'idUser'=>$_SESSION['idUser'],
-  
-      );
-      print_r($demande);
-  
-    $register_demande=true/*$this->modelDemandes->register_demande($demande)*/;
-  
-    if($register_demande){
-      $this->load->model("modelDemandes");
-      $this->modelDemandes->register_demande($demande);
-      $this->session->set_flashdata('success_msg', "Création de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-      redirect('user/adDemande_view');
-    }
-    else{
-      $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
-      redirect('user/adDemande_view');
-    }
 
 }
 

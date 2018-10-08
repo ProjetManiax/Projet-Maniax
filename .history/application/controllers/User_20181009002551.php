@@ -98,8 +98,8 @@ public function register_offre(){
     $register_demande=true/*$this->modelDemandes->register_demande($demande)*/;
   
     if($register_demande){
-      $this->load->model("modelDemandes");
-      $this->modelDemandes->register_demande($demande);
+      $this->load->model("modelDmandes");
+      $this->modelDmandes->register_demande($demande);
       $this->session->set_flashdata('success_msg', "Création de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
       redirect('user/adDemande_view');
     }
