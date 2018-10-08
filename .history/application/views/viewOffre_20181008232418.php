@@ -34,14 +34,15 @@
                         
                         <div class="form-group">
                         <label>NOM DU SERVICE</label><br>
-                        <select name="service" class='col-sm-12'>
+                        <select name="service" class='col-sm-6'>
                             <?php  
                                 foreach($allServices as $unService){
                                 ?>      
-                                <option value="<?php echo $unService->idService?>"><?php echo $unService->nomService?></option>       
+                                            <option value="<?php echo $unService->nomService?>"><?php echo $unService->nomService?></option>
+                                        
                                 <?php } ?>
                                 </select>   
-                        </div><br>
+                        </div><br><br>
 
                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Valider" name="register" ><br>
                     </fieldset>

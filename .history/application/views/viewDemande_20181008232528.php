@@ -36,7 +36,7 @@
                             <?php  
                                 foreach($allServices as $unService){
                                 ?>      
-                                <option value="<?php echo $unService->idService?>"><?php echo $unService->nomService?></option>       
+                                <option value="<?php echo $unService->nomService?>"><?php echo $unService->nomService?></option>       
                                 <?php } ?>
                                 </select>   
                         </div><br>

@@ -108,7 +108,6 @@ function adOffre_view(){
   $this->load->model("modelOffres");
   $data['maxOffre']=$this->modelOffres->getMaxOffre();
   $this->load->model("modelServices");
-  $data['allServices']=$this->modelServices->getAllServices();
   $this->load->view('viewOffre.php',$data);
 
 }
@@ -118,7 +117,6 @@ function adDemande_view(){
   $this->load->model("modelDemandes");
   $data['maxDemande']=$this->modelDemandes->getMaxDemande();
   $this->load->model("modelServices");
-  $data['allServices']=$this->modelServices->getAllServices();
   $this->load->view('viewDemande.php',$data);
   
 }
