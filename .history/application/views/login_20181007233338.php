@@ -9,7 +9,7 @@
 
     <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4"><br><br>
+        <div class="col-md-4 col-md-offset-4"><br>
             <div class="login-panel panel panel-success">
                 <div class="panel-heading">
                     <h2 class="panel-title">Connexion</h2>
@@ -49,7 +49,7 @@
 
                         </fieldset>
                     </form><br><br>
-                <center><b><h4>Pas encore inscrit ?</h4></b><a href="<?php echo base_url('user/register_view'); ?>">Inscription ici</a></center>
+                <center><b><h4>Pas inscrit ?</h4></b><a href="<?php echo base_url('user/register_view'); ?>">Inscription ici</a></center>
 
                 </div>
             </div>

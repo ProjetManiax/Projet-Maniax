@@ -37,15 +37,6 @@ header{
 .menu a:hover {
 	color: #2C3E50;
 }
-
-.imgUser {
-	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
-	border-radius:50px;
-	width:40px;
-	height:40px;
-}
 /*.separator-body {
 	height: 2px;
 	width: 10%;

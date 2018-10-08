@@ -12,7 +12,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <a href="#" class="logo"><img class="imgUser" class="imgUser" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></a>
+		    <a href="#" class="logo"><img class="imgUser" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></a>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -27,7 +27,7 @@
         <div id="retOffres">
         <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
             <div id="retOffres">
-            <h1>Mes Offres <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adOffre_view', '_blank'">+</button></h1>
+            <h1>Mes Offres <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
             </div>
             <br>
             <p>Voici la liste de ce que je propose</p>
@@ -48,7 +48,7 @@
     <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
         <br><br>
         <div id="retDemandes">
-        <h1>Mes Demandes <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adDemande_view', '_blank'">+</button></h1>
+        <h1>Mes Demandes <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici ce dont j'ai besoin</p>

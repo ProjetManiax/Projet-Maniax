@@ -12,7 +12,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <a href="#" class="logo"><img class="imgUser" class="imgUser" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></a>
+		    <a href="#" class="logo"><img class="imgUser" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></a>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
