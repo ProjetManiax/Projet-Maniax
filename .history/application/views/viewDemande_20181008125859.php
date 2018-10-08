@@ -17,7 +17,7 @@
                     <fieldset>
                         <div class="form-group">
                         <label>NUMERO DE LA DEMANDE</label>
-                            <input class="form-control" name="idDemande" type="text" value='<?php echo ($maxDemande[0]->derniereDemande)+1 ;?>' disabled>
+                            <input class="form-control" name="idDemande" type="text" disabled>
                         </div>
 
                         <div class="form-group">

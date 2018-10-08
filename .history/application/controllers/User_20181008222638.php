@@ -105,17 +105,13 @@ function login_user(){
 
 function adOffre_view(){
 
-  $this->load->model("modelOffres");
-  $data['maxOffre']=$this->modelOffres->getMaxOffre();
-  $this->load->view('viewOffre.php',$data);
+$this->load->view('viewOffre.php');
 
 }
 
 function adDemande_view(){
 
-  $this->load->model("modelDemandes");
-  $data['maxDemande']=$this->modelDemandes->getMaxDemande();
-  $this->load->view('viewDemande.php',$data);
+  $this->load->view('viewDemande.php');
   
 }
 

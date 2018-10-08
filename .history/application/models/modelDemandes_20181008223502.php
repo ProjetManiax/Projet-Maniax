@@ -6,7 +6,7 @@ class modelDemandes extends CI_model{
     }
 
     function  getMaxDemande(){
-        $sql = $this->db->query("select max(idDemande) as 'derniereDemande' from demande");
+        $sql = $this->db->query("SELECT max(idDemande) from demande");
         return $sql->result();
     }
 }

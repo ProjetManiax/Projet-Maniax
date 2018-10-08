@@ -114,7 +114,7 @@ function adOffre_view(){
 function adDemande_view(){
 
   $this->load->model("modelDemandes");
-  $data['maxDemande']=$this->modelDemandes->getMaxDemande();
+  $data=$this->modelDemandes->getMaxDemande();
   $this->load->view('viewDemande.php',$data);
   
 }

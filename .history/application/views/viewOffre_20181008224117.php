@@ -19,7 +19,7 @@
                     <fieldset>
                         <div class="form-group">
                         <label>NUMERO DE L'OFFRE</label>
-                            <input class="form-control" name="idOffre" type="text" value='<?php echo ($maxOffre[0]->derniereOffre)+1 ;?>' disabled>
+                            <input class="form-control" name="idOffre" type="text" value='<?php echo $maxOffre ?>' disabled>
                         </div>
 
                         <div class="form-group">
