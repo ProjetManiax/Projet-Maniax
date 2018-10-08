@@ -11,32 +11,13 @@
 
 <div class='container'>
         <h1 align=center>Création d'une nouvelle demande</h1><br><br>
-        <?php
-              $success_msg= $this->session->flashdata('success_msg');
-              $error_msg= $this->session->flashdata('error_msg');
-
-                  if($success_msg){
-                    ?>
-                    <div class="alert alert-success">
-                      <?php echo $success_msg; ?>
-                    </div>
-                  <?php
-                  }
-                  if($error_msg){
-                    ?>
-                    <div class="alert alert-danger">
-                      <?php echo $error_msg; ?>
-                    </div>
-                    <?php
-                  }
-                  ?>
     <div class='row'>
             <div class='col-sm-6'>
                 <form role="form" method="post" action="<?php echo base_url('user/register_demande'); ?>">
                     <fieldset>
                         <div class="form-group">
                         <label>NUMERO DE LA DEMANDE</label>
-                            <input class="form-control" name="idDemande" type="text" value='<?php echo ($maxDemande[0]->derniereDemande)+1 ;?>' readonly="readonly">
+                            <input class="form-control" name="idDemande" type="text" value='<?php echo ($maxDemande[0]->derniereDemande)+1 ;?>' disabled>
                         </div>
 
                         <div class="form-group">
@@ -46,7 +27,7 @@
 
                         <div class="form-group">
                         <label>DATE DE LA DEMANDE</label>
-                            <input class="form-control" name="dateDemande" type="date" value="" required>
+                            <input class="form-control" name="date" type="date" value="" required>
                         </div>
 
                         <div class="form-group">
@@ -55,7 +36,7 @@
                             <?php  
                                 foreach($allServices as $unService){
                                 ?>      
-                                <option value="<?php echo $unService->idService?>"><?php echo $unService->nomService?></option>       
+                                <option value="<?php echo $unService->nomService?>"><?php echo $unService->nomService?></option>       
                                 <?php } ?>
                                 </select>   
                         </div><br>

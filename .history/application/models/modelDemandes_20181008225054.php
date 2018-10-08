@@ -9,13 +9,6 @@ class modelDemandes extends CI_model{
         $sql = $this->db->query("select max(idDemande) as 'derniereDemande' from demande");
         return $sql->result();
     }
-
-    public function register_demande($demande){
-
-
-        $this->db->insert('demande', $demande);
-      
-    }
 }
 
 ?>

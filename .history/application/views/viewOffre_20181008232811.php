@@ -10,25 +10,6 @@
 <body>
 <div class='container'>
     <h1 align=center>Création d'une nouvelle offre</h1><br><br>
-    <?php
-              $success_msg= $this->session->flashdata('success_msg');
-              $error_msg= $this->session->flashdata('error_msg');
-
-                  if($success_msg){
-                    ?>
-                    <div class="alert alert-success">
-                      <?php echo $success_msg; ?>
-                    </div>
-                  <?php
-                  }
-                  if($error_msg){
-                    ?>
-                    <div class="alert alert-danger">
-                      <?php echo $error_msg; ?>
-                    </div>
-                    <?php
-                  }
-                  ?>
     <div class='row'>
         <div class='col-sm-6'><br>
             <img class="" src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" alt="">           
@@ -38,7 +19,7 @@
                     <fieldset>
                         <div class="form-group">
                         <label>NUMERO DE L'OFFRE</label>
-                            <input class="form-control" name="idOffre" type="text" value='<?php echo ($maxOffre[0]->derniereOffre)+1 ;?>' readonly="readonly">
+                            <input class="form-control" name="idOffre" type="text" value='<?php echo ($maxOffre[0]->derniereOffre)+1 ;?>' disabled>
                         </div>
 
                         <div class="form-group">
@@ -48,7 +29,7 @@
 
                         <div class="form-group">
                         <label>DATE DE L'OFFRE</label>
-                            <input class="form-control"  name="dateOffre" type="date" value="" required>
+                            <input class="form-control"  name="date" type="date" value="" required>
                         </div>
                         
                         <div class="form-group">

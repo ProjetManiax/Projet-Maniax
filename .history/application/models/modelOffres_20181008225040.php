@@ -9,13 +9,6 @@ class modelOffres extends CI_model{
         $sql = $this->db->query("select max(idOffre) as 'derniereOffre' from offre");
         return $sql->result();
     }
-
-    public function register_offre($offre){
-
-
-        $this->db->insert('offre', $offre);
-      
-    }
 }
 
 ?>
