@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='../jQuery/jquery-3.1.1.js'></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styleAccueil.css">
 </head>
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgUser" class="imgUser" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -37,7 +37,7 @@
                 ?><br>
                 <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                <div class='row'><h5 class="card-title"><?php echo $uneOffre->nomService?></h5><a href="setOffre_view" ><img class="imgResize" src="../images/Edit.ico"></a></div>
+                <h5 class="card-title"><?php echo $uneOffre->nomService?><a href="setOffre_view"><span class="glyphicon glyphicon-cog"></span></a></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
                 <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
                 </div>
@@ -59,7 +59,7 @@
                 ?><br>
                 <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                <div class='row'><h5 class="card-title"><?php echo $uneDemande->nomService?></h5><a href="setDemande_view" ><img class="imgResize" src="../images/Edit.ico"></a></div>
+                <h5 class="card-title"><?php echo $uneDemande->nomService?></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
                 <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
                 </div>

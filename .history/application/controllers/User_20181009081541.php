@@ -89,7 +89,7 @@ public function register_offre(){
     'idDemande'=>$this->input->post('idDemande'),
     'descriptionDemande'=>$this->input->post('descriptionDemande'),
     'dateDemande'=>$this->input->post('dateDemande'),
-    'idService'=>$this->input->post('idService'),
+    'idService'=>1/*$this->input->post('idService')*/,
     'idUser'=>$_SESSION['idUser'],
   
       );
