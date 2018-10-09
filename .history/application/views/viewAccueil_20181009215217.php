@@ -36,8 +36,8 @@
             <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 <div class="card" style="width: 18rem;">
-                <div class="card-header"><h5><?php echo $uneOffre->nomService?><a href="setOffre_view" ><img align=right class="imgResize" src="../images/Edit.ico"></a></h5></div>
                 <div class="card-body">
+                <div class='row'><h5 class="card-title"><?php echo $uneOffre->nomService?></h5><a href="setOffre_view" ><img class="imgResize" src="../images/Edit.ico"></a></div>
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
                 <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
                 </div>
@@ -58,8 +58,9 @@
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class="card" style="width: 18rem;">
-                <div class="card-header"><h5><?php echo $uneDemande->nomService?><a href="setDemande_view" ><img align=right class="imgResize" src="../images/Edit.ico"></a></h5></div>
+                <div class="card-header">
                 <div class="card-body">
+                <div class='row'><h5 class="card-title"><?php echo $uneDemande->nomService?></h5><a href="setDemande_view" ><img class="imgResize" src="../images/Edit.ico"></a></div>
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
                 <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
                 </div>
