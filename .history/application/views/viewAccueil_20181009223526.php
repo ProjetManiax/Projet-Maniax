@@ -47,11 +47,7 @@
                 </div>
                 </div>
 
-                <input type="hidden" name="idOffre" value="<?php echo $uneOffre->idOffre ?>">
-                <input type="hidden" name="descriptionOffre" value="<?php echo $uneOffre->descriptionOffre ?>">
-                <input type="hidden" name="dateOffre" value="<?php echo $uneOffre->dateOffre ?>">
-                <input type="hidden" name="nomService" value="<?php echo $uneOffre->nomService ?>">
-                <input type="hidden" name="photoService" value="<?php echo $uneOffre->photoService ?>">
+                <input type="text" value="<?php echo $uneOffre->idDemande ?>" >
             </form>
         <?php } ?>
             
@@ -68,23 +64,13 @@
         <div id="divDemandes">    
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <form role="form" id="formDemande" method="post" action="<?php echo base_url('user/setDemande_view'); ?>">
                 <div class="card" style="width: 18rem;">
-                <div class="card-header"><h5><?php echo $uneDemande->nomService?>
-                <a href="setDemande_view" >
-                <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formDemande').submit(); return false;"></a></h5></div>
+                <div class="card-header"><h5><?php echo $uneDemande->nomService?><a href="setDemande_view" ><img align=right class="imgResize" src="../images/Edit.ico"></a></h5></div>
                 <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
                 <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
                 </div>
                 </div>
-
-                <input type="hidden" name="idDemande" value="<?php echo $uneDemande->idDemande ?>">
-                <input type="hidden" name="descriptionDemande" value="<?php echo $uneDemande->descriptionDemande ?>">
-                <input type="hidden" name="dateDemande" value="<?php echo $uneDemande->dateDemande ?>">
-                <input type="hidden" name="nomService" value="<?php echo $uneDemande->nomService ?>">
-                <input type="hidden" name="photoService" value="<?php echo $uneDemande->photoService ?>">
-            </form>
             <?php } ?>
             
             </div>

@@ -80,12 +80,7 @@ function login_user(){
 
       }
 
-}
 
-public function user_logout(){
-
-  $this->session->sess_destroy();
-  redirect('user/login_view', 'refresh');
 }
 
 public function register_offre(){
@@ -198,6 +193,13 @@ function adDemande_view(){
   $this->load->view('viewDemande.php',$data);
   
 }
+
+public function user_logout(){
+
+  $this->session->sess_destroy();
+  redirect('user/login_view', 'refresh');
+}
+
 
 }
 

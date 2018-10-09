@@ -54,40 +54,6 @@ public function register_user(){
 
 }
 
-function login_user(){
-  $user_login=array(
-
-  'login'=>$this->input->post('login'),
-  'mdp'=>$this->input->post('mdp')
-
-    );
-
-    $data=$this->user_model->login_user($user_login['login'],$user_login['mdp']);
-      if($data)
-      {
-        $_SESSION['idUser']=$data['idUser'];
-        $_SESSION['nomUser']=$data['nomUser'];
-        $_SESSION['login']=$data['login'];
-        $_SESSION['photoUser']=$data['photoUser'];
-
-        redirect('user/home');
-   
-
-      }
-      else{
-        $this->session->set_flashdata('error_msg',  "Login ou mot de passe incorrect !");
-        $this->load->view("login.php");
-
-      }
-
-}
-
-public function user_logout(){
-
-  $this->session->sess_destroy();
-  redirect('user/login_view', 'refresh');
-}
-
 public function register_offre(){
 
   $offre=array(
@@ -179,6 +145,35 @@ public function setDemande_view(){
   $this->load->view('setDemande.php',$demande);
 }
 
+function login_user(){
+  $user_login=array(
+
+  'login'=>$this->input->post('login'),
+  'mdp'=>$this->input->post('mdp')
+
+    );
+
+    $data=$this->user_model->login_user($user_login['login'],$user_login['mdp']);
+      if($data)
+      {
+        $_SESSION['idUser']=$data['idUser'];
+        $_SESSION['nomUser']=$data['nomUser'];
+        $_SESSION['login']=$data['login'];
+        $_SESSION['photoUser']=$data['photoUser'];
+
+        redirect('user/home');
+   
+
+      }
+      else{
+        $this->session->set_flashdata('error_msg',  "Login ou mot de passe incorrect !");
+        $this->load->view("login.php");
+
+      }
+
+
+}
+
 function adOffre_view(){
 
   $this->load->model("modelOffres");
@@ -198,6 +193,13 @@ function adDemande_view(){
   $this->load->view('viewDemande.php',$data);
   
 }
+
+public function user_logout(){
+
+  $this->session->sess_destroy();
+  redirect('user/login_view', 'refresh');
+}
+
 
 }
 

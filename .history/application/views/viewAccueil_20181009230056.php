@@ -72,7 +72,7 @@
                 <div class="card" style="width: 18rem;">
                 <div class="card-header"><h5><?php echo $uneDemande->nomService?>
                 <a href="setDemande_view" >
-                <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formDemande').submit(); return false;"></a></h5></div>
+                <img align=right class="imgResize" src="../images/Edit.ico"></a></h5></div>
                 <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
                 <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
