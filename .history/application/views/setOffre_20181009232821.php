@@ -56,7 +56,7 @@
                         <input class="form-control" name="nomService" type="text" value='<?php echo $nomService ;?>' readonly="readonly">
                         </div><br>
 
-                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Modifier" name="register" ><br>
+                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Valider" name="register" ><br>
                     </fieldset>
                 </form>
                     <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
