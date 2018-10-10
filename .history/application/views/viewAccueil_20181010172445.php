@@ -25,24 +25,24 @@
 	</header>
     <section class="container-fluid about">
         <div class="container">
-            <article> 
+            <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12"> 
             <div id="retOffres">
                 <h1>Mes Offres <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adOffre_view', '_blank'">+</button></h1>
             </div><br>
             <p>Voici la liste de ce que je propose</p>
-    <div id="divOffres" class="row align-items-center">    
+            <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
-            <form class='col-md-4' role="form" id="formOffre" method="post" action="<?php echo base_url('user/setOffre_view'); ?>">
-            <div class="card" style="width: 18rem; height: 10rem; ">
+            <form class='col-4' role="form" id="formOffre" method="post" action="<?php echo base_url('user/setOffre_view'); ?>">
+                <div class="card" style="width: 18rem;">
                 <div class="card-header">
-                    <h5><?php echo $uneOffre->nomService?><a href="setOffre_view" >
-                    <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formOffre').submit(); return false;"></a></h5>
-                </div>
+                <h5><?php echo $uneOffre->nomService?>
+                <a href="setOffre_view" >
+                <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formOffre').submit(); return false;"></a></h5></div>
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
-                    <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
+                <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
+                <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
                 </div>
-            </div><br>  
+                </div>
 
                 <input type="hidden" name="idOffre" value="<?php echo $uneOffre->idOffre ?>">
                 <input type="hidden" name="descriptionOffre" value="<?php echo $uneOffre->descriptionOffre ?>">
@@ -51,21 +51,22 @@
                 <input type="hidden" name="photoService" value="<?php echo $uneOffre->photoService ?>">
             </form>
         <?php } ?>
-    </div>
-    </article>
-
-    <article>
+            
+            </div>
+        </article>
+    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
         <br><br>
         <div id="retDemandes">
         <h1>Mes Demandes <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adDemande_view', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici ce dont j'ai besoin</p>
-        <div id="divDemandes" class="row align-items-center">    
+        <br>
+        <div id="divDemandes">    
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <form class='col-md-4' role="form" id="formDemande" method="post" action="<?php echo base_url('user/setDemande_view'); ?>">
-                <div class="card" style="width: 18rem; height: 10rem;">
+            <form role="form" id="formDemande" method="post" action="<?php echo base_url('user/setDemande_view'); ?>">
+                <div class="card" style="width: 18rem;">
                 <div class="card-header"><h5><?php echo $uneDemande->nomService?>
                 <a href="setDemande_view" >
                 <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formDemande').submit(); return false;"></a></h5></div>
@@ -73,7 +74,7 @@
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
                 <p class="card-text"><?php echo $uneDemande->descriptionDemande?></p>
                 </div>
-                </div><br>
+                </div>
 
                 <input type="hidden" name="idDemande" value="<?php echo $uneDemande->idDemande ?>">
                 <input type="hidden" name="descriptionDemande" value="<?php echo $uneDemande->descriptionDemande ?>">
@@ -85,8 +86,8 @@
             
             </div>
     </article>
-
-    <article>
+    <div class="row">
+    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
         <br><br>
         <div id="retDeals">
         <h1>Mes Deals <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
@@ -94,7 +95,7 @@
         <br>
         <p>Voici la liste de ce que j'ai échangé</p>
         <br>
-        <div id="divMesDeals" class="row align-items-center">
+        <div id="divMesDeals">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="Card image cap">
                     <div class="card-body" align='center'>
@@ -111,6 +112,7 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                 </div>
+                <div class="card" style="width: 18rem;">
         </div>
     </article>        
         </div>

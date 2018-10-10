@@ -61,6 +61,7 @@
         </div>
         <br>
         <p>Voici ce dont j'ai besoin</p>
+        <br>
         <div id="divDemandes" class="row align-items-center">    
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
@@ -111,6 +112,7 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                 </div>
+                <div class="card" style="width: 18rem;">
         </div>
     </article>        
         </div>

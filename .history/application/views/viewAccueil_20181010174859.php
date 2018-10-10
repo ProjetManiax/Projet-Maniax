@@ -111,6 +111,7 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                 </div>
+                <div class="card" style="width: 18rem;">
         </div>
     </article>        
         </div>

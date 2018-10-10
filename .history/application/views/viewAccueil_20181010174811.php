@@ -61,11 +61,12 @@
         </div>
         <br>
         <p>Voici ce dont j'ai besoin</p>
+        <br>
         <div id="divDemandes" class="row align-items-center">    
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
             <form class='col-md-4' role="form" id="formDemande" method="post" action="<?php echo base_url('user/setDemande_view'); ?>">
-                <div class="card" style="width: 18rem; height: 10rem;">
+                <div class="card" style="width: 18rem; heigh: 10rem;">
                 <div class="card-header"><h5><?php echo $uneDemande->nomService?>
                 <a href="setDemande_view" >
                 <img align=right class="imgResize" src="../images/Edit.ico" onclick="document.getElementById('formDemande').submit(); return false;"></a></h5></div>
@@ -111,6 +112,7 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                 </div>
+                <div class="card" style="width: 18rem;">
         </div>
     </article>        
         </div>
