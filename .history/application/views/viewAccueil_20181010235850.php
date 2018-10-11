@@ -32,7 +32,7 @@
             <p>Voici la liste de ce que je propose</p>
     <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
-            <form class='col-md-4' role="form" id="formOffre" method="post" action="<?php echo base_url('user/setOffre_view'); ?>">
+            <form class='col-md-4' role="form" id="formOffre" method="post" action="<?php echo /*base_url('user/setOffre_view');*/offreValues() ; ?>">
             <div class="card" style="width: 18rem; height: 10rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?><a href="setOffre_view" >
@@ -64,7 +64,7 @@
         <div id="divDemandes" class="row align-items-center">    
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <form class='col-md-4' role="form" id="formDemande" method="post" action="offreValues()">
+            <form class='col-md-4' role="form" id="formDemande" method="post" action="<?php echo base_url('user/setDemande_view'); ?>">
                 <div class="card" style="width: 18rem; height: 10rem;">
                 <div class="card-header"><h5><?php echo $uneDemande->nomService?>
                 <a href="setDemande_view" >
