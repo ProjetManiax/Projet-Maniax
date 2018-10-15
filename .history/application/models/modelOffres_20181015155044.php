@@ -10,19 +10,19 @@ class modelOffres extends CI_model{
         return $sql->result();
     }
 
+    public function register_offre($offre){
+        $this->db->insert('offre', $offre);
+    }
+
     public function getInfosOffre($idOffre){
         $sql = $this->db->query("select service.photoService, idOffre, descriptionOffre, dateOffre, nomService from offre inner join service on offre.idService=service.idService where idOffre =".$idOffre);
         return $sql->result();
     }
 
-    public function register_offre($offre){
-        $this->db->insert('offre', $offre);
-    }
-
     function set_offre($idOffre,$offre){
         $this->db->where('idOffre', $idOffre);
         $this->db->update('offre', $offre);
-    }
+        }
         
 }
 

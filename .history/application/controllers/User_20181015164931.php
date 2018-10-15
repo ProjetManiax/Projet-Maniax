@@ -134,6 +134,7 @@ public function set_offre(){
 
     'descriptionOffre'=>$this->input->post('descriptionOffre'),
     'dateOffre'=>$this->input->post('dateOffre'),
+    'idService'=>$this->input->post('idService'),
 
     );
     print_r($offre);
@@ -207,6 +208,7 @@ public function set_demande(){
 
     'descriptionDemande'=>$this->input->post('descriptionDemande'),
     'dateDemande'=>$this->input->post('dateDemande'),
+    'idService'=>$this->input->post('idService'),
 
     );
     print_r($demande);

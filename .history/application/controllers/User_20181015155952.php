@@ -201,30 +201,6 @@ public function register_demande(){
 
 }
 
-public function set_demande(){
-  $idDemande= $this->input->post('idDemande');
-  $demande=array(
-
-    'descriptionDemande'=>$this->input->post('descriptionDemande'),
-    'dateDemande'=>$this->input->post('dateDemande'),
-
-    );
-    print_r($demande);
-
-  $register_offre=true;
-
-  if($register_offre){
-    $this->load->model("modelDemandes");
-    $this->modelDemandes->set_demande($idDemande,$demande);
-    $this->session->set_flashdata('success_msg', "Modification de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-    redirect('user/setDemande_view');
-  }
-  else{
-    $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
-    redirect('user/setDemande_view');
-  }
-}
-
 public function getDemandeByIdDemande(){
   $idDemande = $_POST['idDemande'];
   $this->load->model("modelDemandes");

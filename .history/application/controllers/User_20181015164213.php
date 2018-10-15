@@ -217,11 +217,11 @@ public function set_demande(){
     $this->load->model("modelDemandes");
     $this->modelDemandes->set_demande($idDemande,$demande);
     $this->session->set_flashdata('success_msg', "Modification de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-    redirect('user/setDemande_view');
+    redirect('user/setOffre_view');
   }
   else{
     $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
-    redirect('user/setDemande_view');
+    redirect('user/setOffre_view');
   }
 }
 
