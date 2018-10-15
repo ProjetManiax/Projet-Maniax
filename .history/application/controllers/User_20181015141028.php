@@ -11,7 +11,6 @@ public function __construct(){
 
 }
 
-// fonctions propres à l'utilisateur
 public function index()
 {
 $this->load->view("login.php");
@@ -101,7 +100,6 @@ public function user_logout(){
   redirect('user/login_view', 'refresh');
 }
 
-// fonctions propres aux offres
 public function register_offre(){
 
   $offre=array(
@@ -149,7 +147,6 @@ function adOffre_view(){
 
 }
 
-// fonctions propres aux demandes
 public function register_demande(){
 
   $demande=array(

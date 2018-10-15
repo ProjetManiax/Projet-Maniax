@@ -11,7 +11,6 @@ public function __construct(){
 
 }
 
-// fonctions propres à l'utilisateur
 public function index()
 {
 $this->load->view("login.php");
@@ -83,25 +82,12 @@ function login_user(){
 
 }
 
-public function login_view(){
-
-  $this->load->view("login.php");
-
-}
-
-public function register_view(){
-
-  $this->load->view("register.php");
-
-}
-
 public function user_logout(){
 
   $this->session->sess_destroy();
   redirect('user/login_view', 'refresh');
 }
 
-// fonctions propres aux offres
 public function register_offre(){
 
   $offre=array(
@@ -127,6 +113,19 @@ public function register_offre(){
     redirect('user/adOffre_view');
   }
 }
+ 
+
+public function login_view(){
+
+  $this->load->view("login.php");
+
+}
+
+public function register_view(){
+
+  $this->load->view("register.php");
+
+}
 
 public function getOffreByIdOffre(){
   $idOffre = $_POST['idOffre'];
@@ -149,7 +148,6 @@ function adOffre_view(){
 
 }
 
-// fonctions propres aux demandes
 public function register_demande(){
 
   $demande=array(
