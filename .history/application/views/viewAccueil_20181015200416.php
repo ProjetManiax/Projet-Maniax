@@ -101,7 +101,7 @@
     <article>
         <br><br>
         <div id="retDeals">
-        <h1>Mes Deals <button title="Rechercher un deal" type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
+        <h1>Mes Deals <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici la liste de ce que j'ai échangé</p>

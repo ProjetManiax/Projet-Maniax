@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='../jQuery/jquery-3.1.1.js'></script>
     <script src='../js/myFunctions.js'></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="../css/styleAccueil.css">
     <script>
     $(document).ready(function() 
@@ -50,7 +50,7 @@
         <div class="container">
             <article> 
             <div id="retOffres">
-                <h1>Mes Offres <button title="Créer une nouvelle offre" type="button" class="btn btn-outline-primary" onclick="window.location.href='adOffre_view', '_blank'">+</button></h1>
+                <h1>Mes Offres <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adOffre_view', '_blank'">+</button></h1>
             </div><br>
             <p>Voici la liste de ce que je propose</p>
     <div id="divOffres" class="row align-items-center">    
@@ -59,7 +59,7 @@
             <div class="card" style="width: 18rem; height: 10rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?>
-                    <img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
+                    <img name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
                 </div>
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
@@ -74,7 +74,7 @@
     <article>
         <br><br>
         <div id="retDemandes">
-        <h1>Mes Demandes <button title="Créer une nouvelle demande" type="button" class="btn btn-outline-primary" onclick="window.location.href='adDemande_view', '_blank'">+</button></h1>
+        <h1>Mes Demandes <button type="button" class="btn btn-outline-primary" onclick="window.location.href='adDemande_view', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici ce dont j'ai besoin</p>
@@ -85,7 +85,7 @@
                 <div class="card" style="width: 18rem; height: 10rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
-                    <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
+                    <img  name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
                     </div>
                 <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
@@ -101,7 +101,7 @@
     <article>
         <br><br>
         <div id="retDeals">
-        <h1>Mes Deals <button title="Rechercher un deal" type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
+        <h1>Mes Deals <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici la liste de ce que j'ai échangé</p>

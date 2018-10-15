@@ -85,7 +85,7 @@
                 <div class="card" style="width: 18rem; height: 10rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
-                    <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
+                    <img  name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
                     </div>
                 <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneDemande->dateDemande?></h6>
@@ -101,7 +101,7 @@
     <article>
         <br><br>
         <div id="retDeals">
-        <h1>Mes Deals <button title="Rechercher un deal" type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
+        <h1>Mes Deals <button type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici la liste de ce que j'ai échangé</p>
