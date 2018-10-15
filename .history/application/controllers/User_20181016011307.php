@@ -35,9 +35,7 @@ public function home(){
     //$data["monDeal"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
     $this->load->view("viewAccueil.php",$data);
   }
-  else{
-    $this->load->view("redirection.php");
-  }
+  else
   
 }
 
@@ -108,6 +106,10 @@ public function user_logout(){
 
   $this->session->sess_destroy();
   redirect('user/login_view', 'refresh');
+}
+
+public function redirection_view(){
+  $this->load->view("register.php");
 }
 
 // fonctions propres aux offres

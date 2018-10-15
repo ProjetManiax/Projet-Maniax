@@ -36,7 +36,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >&nbsp;&nbsp;<?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>
-                    <p class="card-text"><?php echo $uneOffre->descriptionOffre?></p>
+                    <span class="align-middle"><p class="card-text"><?php echo $uneOffre->descriptionOffre?></p></span>
                 </div>
             </div><br>  
             </div>
@@ -82,7 +82,7 @@
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class='col-md-4'>
-                <div class="card" style="width: 18rem; height: 11.5rem;">
+                <div class="card" style="width: 18rem; height: 12rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
                     <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
@@ -132,5 +132,7 @@
         </div>
     </section>
     
+
+    <br>
 </body>
 </html>

@@ -19,26 +19,17 @@ $this->load->view("login.php");
 
 // fonctions propres à l'utilisateur
 public function home(){
-
-  if(!empty($_SESSION['idUser'])) {
-
-    $data["idUser"]=$_SESSION['idUser'];
-    $data["nomUser"]=$_SESSION['nomUser'];
-    $data["photoUser"]=$_SESSION['photoUser'];
-    $this->load->model("modelOffres");
-    $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
-    $this->load->model("modelUser");
-    $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
-    $this->load->model("modelDemandes");
-    $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
-    $this->load->model("modelDeals");
-    //$data["monDeal"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
-    $this->load->view("viewAccueil.php",$data);
-  }
-  else{
-    $this->load->view("redirection.php");
-  }
-  
+  $this->load->model("modelOffres");
+  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
+  $this->load->model("modelUser");
+  $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
+  $this->load->model("modelDemandes");
+  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
+  $this->load->model("modelDeals");
+  //$data["monDeal"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
+  $data["nomUser"]=$_SESSION['nomUser'];
+  $data["photoUser"]=$_SESSION['photoUser'];
+  $this->load->view("viewAccueil.php",$data);
 }
 
 public function register_user(){
@@ -83,6 +74,7 @@ function login_user(){
 
         redirect('user/home');
    
+
       }
       else{
         $this->session->set_flashdata('error_msg',  "Login ou mot de passe incorrect !");
@@ -123,7 +115,9 @@ public function register_offre(){
     );
     print_r($offre);
 
-  if(!empty($offre)){
+  $register_offre=true;
+
+  if($register_offre){
     $this->load->model("modelOffres");
     $this->modelOffres->register_offre($offre);
     $this->session->set_flashdata('success_msg', "Création de l'offre réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
@@ -145,7 +139,9 @@ public function set_offre(){
     );
     print_r($offre);
 
-    if(!empty($offre)){
+  $register_offre=true;
+
+  if($register_offre){
     $this->load->model("modelOffres");
     $this->modelOffres->set_offre($idOffre,$offre);
     $this->session->set_flashdata('success_msg', "Modification de l'offre réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
@@ -191,7 +187,9 @@ public function register_demande(){
     );
     print_r($demande);
 
-    if(!empty($demande)){
+  $register_demande=true;
+
+  if($register_demande){
     $this->load->model("modelDemandes");
     $this->modelDemandes->register_demande($demande);
     $this->session->set_flashdata('success_msg', "Création de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
@@ -216,7 +214,7 @@ public function set_demande(){
 
   $register_offre=true;
 
-  if(!empty($demande)){
+  if($register_offre){
     $this->load->model("modelDemandes");
     $this->modelDemandes->set_demande($idDemande,$demande);
     $this->session->set_flashdata('success_msg', "Modification de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");

@@ -36,7 +36,7 @@ public function home(){
     $this->load->view("viewAccueil.php",$data);
   }
   else{
-    $this->load->view("redirection.php");
+    $this->load->view("index.html");
   }
   
 }

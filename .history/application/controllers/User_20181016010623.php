@@ -19,26 +19,18 @@ $this->load->view("login.php");
 
 // fonctions propres à l'utilisateur
 public function home(){
-
-  if(!empty($_SESSION['idUser'])) {
-
-    $data["idUser"]=$_SESSION['idUser'];
-    $data["nomUser"]=$_SESSION['nomUser'];
-    $data["photoUser"]=$_SESSION['photoUser'];
-    $this->load->model("modelOffres");
-    $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
-    $this->load->model("modelUser");
-    $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
-    $this->load->model("modelDemandes");
-    $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
-    $this->load->model("modelDeals");
-    //$data["monDeal"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
-    $this->load->view("viewAccueil.php",$data);
-  }
-  else{
-    $this->load->view("redirection.php");
-  }
-  
+  $this->load->model("modelOffres");
+  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
+  $this->load->model("modelUser");
+  $data["lesUsers"]=$this->modelUser->getUser($_SESSION['idUser']);
+  $this->load->model("modelDemandes");
+  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
+  $this->load->model("modelDeals");
+  //$data["monDeal"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
+  $data["nomUser"]=$_SESSION['nomUser'];
+  $data["photoUser"]=$_SESSION['photoUser'];
+  $data["idUser"]=$_SESSION['idUser'];
+  $this->load->view("viewAccueil.php",$data);
 }
 
 public function register_user(){
@@ -109,6 +101,10 @@ public function user_logout(){
   $this->session->sess_destroy();
   redirect('user/login_view', 'refresh');
 }
+
+/*public function redirection_view(){
+
+}*/
 
 // fonctions propres aux offres
 public function register_offre(){

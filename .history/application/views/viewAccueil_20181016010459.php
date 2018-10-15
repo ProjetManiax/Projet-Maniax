@@ -1,3 +1,7 @@
+<?php if(null($idUser)){ 
+    header('Location: redirection_view');
+    exit();
+    }?>
 <!DOCTYPE html>
 <html>
 <head>
