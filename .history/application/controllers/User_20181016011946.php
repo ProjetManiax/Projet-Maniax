@@ -47,7 +47,6 @@ public function register_user(){
       'nomUser'=>$this->input->post('nomUser'),
       'login'=>$this->input->post('login'),
       'mdp'=>$this->input->post('mdp'),
-      'photoUser'=>'https://image.noelshack.com/fichiers/2018/34/1/1534754007-newuser.png',
 
         );
         print_r($user);

@@ -59,7 +59,7 @@
             <div class="card" style="width: 18rem; height: 11.5rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?>
-                    <img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
+                    <a href=""><img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></a></h5>
                 </div>
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $uneOffre->dateOffre?></h6>

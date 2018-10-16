@@ -36,7 +36,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >&nbsp;&nbsp;<?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -132,5 +132,7 @@
         </div>
     </section>
     
+
+    <br>
 </body>
 </html>

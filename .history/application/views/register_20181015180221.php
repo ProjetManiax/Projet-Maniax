@@ -18,18 +18,15 @@
                   <div class="panel-heading">
                       <h3 class="panel-title">Inscription</h3>
                   </div>
+                  <div class="panel-body">
+
                   <?php
-              $error_msg= $this->session->flashdata('error_msg');
+                  $error_msg=$this->session->flashdata('error_msg');
                   if($error_msg){
-                    ?>
-                    <div class="alert alert-danger">
-                      <?php echo $error_msg; ?>
-                    </div>
-                    <?php
+                    echo $error_msg;
                   }
-                  ?>
+                   ?>
                     <br><br>
-                    <div class="panel-body">
                       <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
                           <fieldset>
                               <div class="form-group">

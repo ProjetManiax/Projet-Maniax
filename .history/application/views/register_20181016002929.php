@@ -19,7 +19,16 @@
                       <h3 class="panel-title">Inscription</h3>
                   </div>
                   <?php
+              $success_msg= $this->session->flashdata('success_msg');
               $error_msg= $this->session->flashdata('error_msg');
+
+                  if($success_msg){
+                    ?>
+                    <div class="alert alert-success">
+                      <?php echo $success_msg; ?>
+                    </div>
+                  <?php
+                  }
                   if($error_msg){
                     ?>
                     <div class="alert alert-danger">

@@ -36,7 +36,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >&nbsp;&nbsp;<?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -109,7 +109,7 @@
         <div id="divMesDeals" class="row align-items-center">
         <?php //foreach($lesDeals as $unDeal){
                 ?><br>
-            <div class="card text-center" style="width: 18rem; ">
+            <div class="card text-center" style="width: 18rem; height: 15rem;">
                 <img class="card-img-top" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="Card image cap">
                     <div class="card-body" align='center'>
                         <h5 class="card-title">Nom :</h5>
@@ -132,5 +132,7 @@
         </div>
     </section>
     
+
+    <br><br><br><br><br><br>
 </body>
 </html>

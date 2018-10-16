@@ -36,7 +36,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >&nbsp;&nbsp;<?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -56,7 +56,7 @@
     <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
             <div class='col-md-4'>
-            <div class="card" style="width: 18rem; height: 11.5rem; ">
+            <div class="card" style="width: 18rem; height: 10rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?>
                     <img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
@@ -82,7 +82,7 @@
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class='col-md-4'>
-                <div class="card" style="width: 18rem; height: 11.5rem;">
+                <div class="card" style="width: 18rem; height: 10rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
                     <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
@@ -97,7 +97,7 @@
             
             </div>
     </article>
- 
+
     <article>
         <br><br>
         <div id="retDeals">
@@ -107,30 +107,29 @@
         <p>Voici la liste de ce que j'ai échangé</p>
         <br>
         <div id="divMesDeals" class="row align-items-center">
-        <?php //foreach($lesDeals as $unDeal){
-                ?><br>
-            <div class="card text-center" style="width: 18rem; ">
+            <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="Card image cap">
                     <div class="card-body" align='center'>
                         <h5 class="card-title">Nom :</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" >Service1</li>
-                        <li class="list-group-item" >vs </li>
-                        <li class="list-group-item" >Service2</li>
-                        <li class="list-group-item" >Date : </li>
-                        <li class="list-group-item" >Note :</li>
+                        <li class="list-group-item" align='center' >Service1 : </li>
+                        <li class="list-group-item" align='center' >vs </li>
+                        <li class="list-group-item" align='center' >Service2</li>
+                        <li class="list-group-item" align='center' >Date : </li>
+                        <li class="list-group-item" align='center' >Note :</li>
                     </ul>
                     <div class="card-body" align='center'>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                 </div>
-                <?php //} ?>
         </div>
     </article>        
         </div>
         </div>
     </section>
     
+
+    <br>
 </body>
 </html>

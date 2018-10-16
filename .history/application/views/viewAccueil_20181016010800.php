@@ -1,3 +1,7 @@
+<?php if(null($idUser)){ 
+    header('Location: D:\wamp\www\sio2\ProjetManiax\application\views\index.html');
+    exit();
+    }?>
 <!DOCTYPE html>
 <html>
 <head>

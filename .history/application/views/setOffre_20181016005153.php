@@ -31,7 +31,7 @@
                   ?>
     <div class='row'>
         <div class='col-sm-6'><br>
-            <img class="img-responsive center-block" src="<?php echo $_SESSION['offre'][0]->photoService ;?>" alt="">           
+            <img class="align-center" src="<?php echo $_SESSION['offre'][0]->photoService ;?>" alt="">           
         </div>
         <div class='col-sm-6'>
             <form role="form" method="post" action="<?php echo base_url('user/set_offre'); ?>">

@@ -36,7 +36,7 @@
 <body>
     <header class="container-fluid header">
 		<div class="container">
-		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >&nbsp;&nbsp;<?php echo $nomUser ?></p>
+		    <p class="logo"><img class="imgResize" src="<?php echo $photoUser ?>" alt="" >  <?php echo $nomUser ?></p>
 		    <nav class="menu">
 			<a href="#"> Accueil </a>
 			<a href="#retOffres"> Offres </a>
@@ -56,7 +56,7 @@
     <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
             <div class='col-md-4'>
-            <div class="card" style="width: 18rem; height: 11.5rem; ">
+            <div class="card" style="width: 18rem; height: 10rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?>
                     <img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
@@ -82,7 +82,7 @@
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class='col-md-4'>
-                <div class="card" style="width: 18rem; height: 11.5rem;">
+                <div class="card" style="width: 18rem; height: 10rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
                     <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
@@ -132,5 +132,7 @@
         </div>
     </section>
     
+
+    <br>
 </body>
 </html>
