@@ -111,16 +111,16 @@
                 ?><br>
             <div class='col-md-4'>
             <div class="card text-center" style="width: 18rem; ">
-                <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
+                <img class="card-img-top" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="Card image cap">
                     <div class="card-body" align='center'>
-                        <h5 class="card-title"><?php echo $unDeal->nomUser ?></h5>
+                        <h5 class="card-title">Nom :</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" ><?php echo $nomService[0]->nomService2 ?></li>
-                        <li class="list-group-item" >vs</li>
-                        <li class="list-group-item" ><?php echo $unDeal->nomService ?></li>
-                        <li class="list-group-item" ><?php echo $unDeal->dateDeal ?></li>
-                        <li class="list-group-item" ><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></li>
+                        <li class="list-group-item" ><?php $unDeal->nomService ?></li>
+                        <li class="list-group-item" >vs </li>
+                        <li class="list-group-item" >Service2</li>
+                        <li class="list-group-item" >Date : </li>
+                        <li class="list-group-item" >Note :</li>
                     </ul>
                     <div class="card-body" align='center'>
                         <button href="#" class="btn btn-primary lg">Afficher</button>

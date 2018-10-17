@@ -116,7 +116,7 @@
                         <h5 class="card-title"><?php echo $unDeal->nomUser ?></h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" ><?php echo $nomService[0]->nomService2 ?></li>
+                        <li class="list-group-item" ><?php echo $unDeal->nomService ?></li>
                         <li class="list-group-item" >vs</li>
                         <li class="list-group-item" ><?php echo $unDeal->nomService ?></li>
                         <li class="list-group-item" ><?php echo $unDeal->dateDeal ?></li>
