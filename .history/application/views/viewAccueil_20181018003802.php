@@ -22,6 +22,16 @@
                 (function(){
                         demandeValues($(this).attr('value'));
                     });
+                
+
+                /*$(function(){
+                    if ($("p[name='note1']").attr("value") <= 0 || $("p[name='note2']").attr("value") <= 0 ){
+                        $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3");
+                    }
+                });*/
+
+                
+            
             }
         );
     </script>

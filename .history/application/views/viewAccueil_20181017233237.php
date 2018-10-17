@@ -14,14 +14,21 @@
             {   
                 
                 $("img[name='offre']").click
-                (function(){
+                (
+                    function()
+                    {
                         offreValues($(this).attr('value'));
-                    });
+                    }
+                );
 
                 $("img[name='demande']").click
-                (function(){
+                (
+                    function()
+                    {
                         demandeValues($(this).attr('value'));
-                    });
+                    }
+                );
+            
             }
         );
     </script>
@@ -103,21 +110,16 @@
         <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" class="card text-white bg-success mb-3" style="width: auto; ">
+            <div class="card text-white bg-danger mb-3" style="width: auto; ">
                 <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
-                        <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
-                        <h5><?php echo $nomService[0]->nomService2 ?></h5>
-                        <h5>vs<h5>
-                        <h5><?php echo $unDeal->nomService ?></h5>
-                        <h5><?php echo $unDeal->dateDeal ?></h5>
-                        <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
+                        <h4 class="card-title"><?php echo $unDeal->nomUser ?></h4>
+                        <p><?php echo $nomService[0]->nomService2 ?></p>
+                        <p>vs<p>
+                        <p><?php echo $unDeal->nomService ?></p>
+                        <p><?php echo $unDeal->dateDeal ?></p>
+                        <p><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></p>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
-                        <script>
-                        if(<?php echo $unDeal->idEtat ;?> == 1){
-                            $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3");
-                        }
-                        </script>
                     </div>
                 </div>
                 </div>
