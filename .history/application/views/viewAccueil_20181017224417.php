@@ -14,14 +14,21 @@
             {   
                 
                 $("img[name='offre']").click
-                (function(){
+                (
+                    function()
+                    {
                         offreValues($(this).attr('value'));
-                    });
+                    }
+                );
 
                 $("img[name='demande']").click
-                (function(){
+                (
+                    function()
+                    {
                         demandeValues($(this).attr('value'));
-                    });
+                    }
+                );
+            
             }
         );
     </script>
@@ -49,7 +56,7 @@
     <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
             <div class='col-md-4'>
-            <div class="card" style="width: auto; height: auto; ">
+            <div class="card" style="width: 18rem; height: 11.5rem; ">
                 <div class="card-header">
                     <h5><?php echo $uneOffre->nomService?>
                     <img title="Modifier l'offre" name='offre' value='<?php echo $uneOffre->idOffre ?>' align=right class="imgResize" src="../images/Edit.ico"></h5>
@@ -75,7 +82,7 @@
             <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class='col-md-4'>
-                <div class="card" style="width: auto; height: auto;">
+                <div class="card" style="width: 18rem; height: 11.5rem;">
                     <div class="card-header">
                     <h5><?php echo $uneDemande->nomService?>
                     <img title="Modifier la demande" name='demande' value='<?php echo $uneDemande->idDemande ?>' align=right class="imgResize" src="../images/Edit.ico" ></h5>
@@ -103,21 +110,20 @@
         <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" class="card text-white bg-success mb-3" style="width: auto; ">
+            <div class="card text-center" style="width: 18rem; ">
                 <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
-                        <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
-                        <h5><?php echo $nomService[0]->nomService2 ?></h5>
-                        <h5>vs<h5>
-                        <h5><?php echo $unDeal->nomService ?></h5>
-                        <h5><?php echo $unDeal->dateDeal ?></h5>
-                        <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
+                        <h5 class="card-title"><?php echo $unDeal->nomUser ?></h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" ><?php echo $unDeal->nomService ?></li>
+                        <li class="list-group-item" >vs</li>
+                        <li class="list-group-item" ><?php echo $unDeal->nomService ?></li>
+                        <li class="list-group-item" ><?php echo $unDeal->dateDeal ?></li>
+                        <li class="list-group-item" ><?php echo $nomService[0]->nomService2 ?> - <?php echo $unDeal->noteUser2 ?></li>
+                    </ul>
+                    <div class="card-body" align='center'>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
-                        <script>
-                        if(<?php echo $unDeal->idEtat ;?> == 1){
-                            $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3");
-                        }
-                        </script>
                     </div>
                 </div>
                 </div>

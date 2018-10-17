@@ -22,6 +22,15 @@
                 (function(){
                         demandeValues($(this).attr('value'));
                     });
+
+                $( "#note1, #note2 " ).load(function(){
+                    if ($(this).attr('value') > 0){
+                        $("#mycard").attr("class", "card text-white bg-danger mb-3");
+                    }
+                });
+
+                
+            
             }
         );
     </script>
@@ -103,7 +112,7 @@
         <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" class="card text-white bg-success mb-3" style="width: auto; ">
+            <div id="mycard" class="card text-white bg-success mb-3" style="width: auto; ">
                 <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
                         <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
@@ -112,12 +121,8 @@
                         <h5><?php echo $unDeal->nomService ?></h5>
                         <h5><?php echo $unDeal->dateDeal ?></h5>
                         <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
+                        <p id='note1' value='<?php echo $unDeal->noteUser1 ?>' hidden></p><p id='note2' value='<?php echo $unDeal->noteUser2 ?>' hidden></p>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
-                        <script>
-                        if(<?php echo $unDeal->idEtat ;?> == 1){
-                            $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3");
-                        }
-                        </script>
                     </div>
                 </div>
                 </div>

@@ -32,8 +32,7 @@ public function home(){
     $this->load->model("modelDemandes");
     $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
     $this->load->model("modelDeals");
-    $data["lesDeals"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
-    $data["nomService"]=$this->modelDeals->getNomService($_SESSION['idUser']);
+    data["lesDeals"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
     $this->load->view("viewAccueil.php",$data);
   }
   else{
