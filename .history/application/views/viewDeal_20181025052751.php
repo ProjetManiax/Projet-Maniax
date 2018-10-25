@@ -12,7 +12,7 @@
     <script>
     $(document).ready(function() 
             {   
-                $("#recherche").keyup(function() {
+                $( "#recherche" ).keyup(function() {
                     rechercheUserForService($(this).attr('value'));
                 });
             }
@@ -65,6 +65,7 @@
         </div>
         <div class="col-md-6 bg-secondary">
             <div id="lesUsers">
+                
             </div>
             <div>
                 <h2 class="" align="center">Les demandes de ...</h2>

@@ -265,7 +265,6 @@ function adDemande_view(){
   $valueInput = $_POST['valueInput'];
   $this->load->model("modelUser");
   $data["lesUsers"]=$this->modelUser->getAllUserForThisService($valueInput);
-  $this->load->view('viewUserService.php',$data);
 
  }
 

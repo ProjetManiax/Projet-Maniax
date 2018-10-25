@@ -45,8 +45,7 @@ function rechercheUserForService($valueInput)
         data:"valueInput="+$valueInput,
         success:function(data)
         {
-            $("#lesUsers").empty();
-            $("#lesUsers").append(data);
+            alert('Gateaux');
         },
         error:function()
         {

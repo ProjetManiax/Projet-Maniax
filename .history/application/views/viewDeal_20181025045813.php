@@ -12,8 +12,9 @@
     <script>
     $(document).ready(function() 
             {   
-                $("#recherche").keyup(function() {
+                $( "#recherche" ).keyup(function() {
                     rechercheUserForService($(this).attr('value'));
+                    alert( "Handler for .keyup() called." );
                 });
             }
         );
@@ -64,7 +65,9 @@
             </div>
         </div>
         <div class="col-md-6 bg-secondary">
-            <div id="lesUsers">
+            <div>
+                <img class="imgResize" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="" >
+                <img class="imgResize" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="" >
             </div>
             <div>
                 <h2 class="" align="center">Les demandes de ...</h2>

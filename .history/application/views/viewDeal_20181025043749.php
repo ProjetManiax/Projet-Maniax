@@ -9,19 +9,10 @@
     <script src='../js/myFunctions.js'></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/creationDeal.css">
-    <script>
-    $(document).ready(function() 
-            {   
-                $("#recherche").keyup(function() {
-                    rechercheUserForService($(this).attr('value'));
-                });
-            }
-        );
-    </script>
 </head>
 <body>
     <div>
-        <input type="text" id="recherche" class="col-md-12 bg-light" value="" placeholder="Saisie le texte recherché dans une offre"><br>
+        <input type="text" class="col-md-12 bg-light" placeholder="Saisie le texte recherché dans une offre"><br>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -64,13 +55,15 @@
             </div>
         </div>
         <div class="col-md-6 bg-secondary">
-            <div id="lesUsers">
+            <div>
+                <img class="imgResize" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="" >
+                <img class="imgResize" src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar2.jpg" alt="" >
             </div>
             <div>
-                <h2 class="" align="center">Les demandes de ...</h2>
+                <h2 class="" align="center">Les offres de ...</h2>
             </div>
             <div>
-                <h2 class="" align="center">Les offres de ...</h2>    
+                <h2 class="" align="center">Les demandes de ...</h2>    
             </div>
         </div>
         <div class="row col-md-12">

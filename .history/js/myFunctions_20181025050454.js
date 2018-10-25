@@ -42,11 +42,10 @@ function rechercheUserForService($valueInput)
     {
         type:"post",
         url:"getUserForThisService",
-        data:"valueInput="+$valueInput,
+        data:"idDemande="+$idDemande,
         success:function(data)
         {
-            $("#lesUsers").empty();
-            $("#lesUsers").append(data);
+            alert('Gateaux');
         },
         error:function()
         {

@@ -36,17 +36,16 @@ function demandeValues($idDemande)
     );
 }
 
-function rechercheUserForService($valueInput)
+function rechercheUserForService($nameService)
 {
     $.ajax(
     {
         type:"post",
-        url:"getUserForThisService",
-        data:"valueInput="+$valueInput,
+        url:"getDemandeByIdDemande",
+        data:"idDemande="+$idDemande,
         success:function(data)
         {
-            $("#lesUsers").empty();
-            $("#lesUsers").append(data);
+            window.location.href="setDemande_view";
         },
         error:function()
         {

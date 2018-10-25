@@ -12,7 +12,7 @@
     <script>
     $(document).ready(function() 
             {   
-                $("#recherche").keyup(function() {
+                $( "#recherche" ).keyup(function() {
                     rechercheUserForService($(this).attr('value'));
                 });
             }
