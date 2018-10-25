@@ -22,6 +22,10 @@
                 (function(){
                         demandeValues($(this).attr('value'));
                     });
+
+                if($("div[name='mycard']").attr("data-val") == 1){
+                    $("div[name='mycard']").attr("class, card text-white bg-danger mb-3 ")
+                });
                 
             }
         );
@@ -104,7 +108,7 @@
         <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" alt="<?php echo $unDeal->idEtat ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
+            <div name="mycard" data-val="<?php echo $unDeal->idEtat ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
                 <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
                         <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
@@ -115,11 +119,6 @@
                         <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
-                    <script>
-                    if($("div[name='mycard']").attr("alt") == 1){
-                        $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3 ")
-                    };
-                    </script>
                 </div>
                 </div>
                 <?php } ?>

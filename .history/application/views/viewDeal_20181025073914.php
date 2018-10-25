@@ -16,8 +16,8 @@
                 $(".photoUser").click
                 (function(){
                     alert('toto');
-                        //getOffres($(this).attr('value'));
-                        //getDemandes($(this).attr('value'));
+                        getOffres($(this).attr('value'));
+                        getDemandes($(this).attr('value'));
                     });
                 
             }

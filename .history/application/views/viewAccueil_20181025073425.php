@@ -15,12 +15,12 @@
                  
                 $("img[name='offre']").click
                 (function(){
-                        offreValues($(this).attr('value'));
+                        offreValues($(this).val());
                     });
 
                 $("img[name='demande']").click
                 (function(){
-                        demandeValues($(this).attr('value'));
+                        demandeValues($(this).val());
                     });
                 
             }

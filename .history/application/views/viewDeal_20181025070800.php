@@ -12,21 +12,17 @@
     <script>
     $(document).ready(function() 
             {   
-                 
-                $(".photoUser").click
-                (function(){
-                    alert('toto');
-                        //getOffres($(this).attr('value'));
-                        //getDemandes($(this).attr('value'));
-                    });
-                
+                $("#recherche").keypress(function(e) {
+                    var touche += String.fromCharCode(e.which);
+                    rechercheUserForService($touche);
+                });
             }
         );
     </script>
 </head>
 <body>
     <div>
-        <input type="text" id="recherche" onkeypress="rechercheUserForService($(this).val());" class="col-md-12 bg-light" value="" placeholder="Saisie le texte recherché dans une offre"><br>
+        <input type="text" id="recherche" class="col-md-12 bg-light" value="" placeholder="Saisie le texte recherché dans une offre"><br>
     </div>
     <div class="row">
         <div class="col-md-6">

@@ -116,7 +116,7 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                     <script>
-                    if($("div[name='mycard']").attr("alt") == 1){
+                    if($("div[name='mycard']") == 1){
                         $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3 ")
                     };
                     </script>

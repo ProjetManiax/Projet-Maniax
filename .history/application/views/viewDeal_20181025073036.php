@@ -9,20 +9,7 @@
     <script src='../js/myFunctions.js'></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/creationDeal.css">
-    <script>
-    $(document).ready(function() 
-            {   
-                 
-                $(".photoUser").click
-                (function(){
-                    alert('toto');
-                        //getOffres($(this).attr('value'));
-                        //getDemandes($(this).attr('value'));
-                    });
-                
-            }
-        );
-    </script>
+    
 </head>
 <body>
     <div>

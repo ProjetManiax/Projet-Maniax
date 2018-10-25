@@ -22,6 +22,10 @@
                 (function(){
                         demandeValues($(this).attr('value'));
                     });
+
+                if($(this).find('img').attr('alt') == 2){
+                    $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3 ")
+                };
                 
             }
         );
@@ -115,11 +119,6 @@
                         <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
-                    <script>
-                    if($("div[name='mycard']").attr("alt") == 1){
-                        $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3 ")
-                    };
-                    </script>
                 </div>
                 </div>
                 <?php } ?>
