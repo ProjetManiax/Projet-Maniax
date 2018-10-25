@@ -56,7 +56,7 @@
         </div>
         <div class="col-md-6 bg-secondary">
             <div>
-            
+            <p>toto</p>
             </div>
             <div>
         

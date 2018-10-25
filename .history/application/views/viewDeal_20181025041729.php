@@ -12,7 +12,7 @@
 </head>
 <body>
     <div>
-        <input type="text" class="col-md-12 bg-light" placeholder="Saisie le texte recherché dans une offre"><br>
+        <input type="text" class="col-md-12 bg-light" placeholder="Saisie le texte recherché dans une offre">
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -54,17 +54,17 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-6 bg-secondary">
+        <div class="col-md-6">
             <div>
-            
+            <p>toto</p>
             </div>
             <div>
         
             </div>
         </div>
-        <div class="row col-md-12">
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a></div>
-        </div>
+        <div align="center">
+            <a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="valider"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
+        </div>  
 </body>
 </html>

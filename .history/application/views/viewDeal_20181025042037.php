@@ -12,20 +12,20 @@
 </head>
 <body>
     <div>
-        <input type="text" class="col-md-12 bg-light" placeholder="Saisie le texte recherché dans une offre"><br>
+        <input type="text" class="col-md-12-lg bg-light" placeholder="Saisie le texte recherché dans une offre">
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div>
                 <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
-                        <div class='col-md-2 bg-warning'>
+                        <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='col-md-10 bg-success'>
+                        <div class='col-md-9 bg-success'>
                             <h5><?php echo $uneDemande->nomService ?></h5>
                             <?php echo $uneDemande->descriptionDemande ?><br>
                             <h6><?php echo $uneDemande->dateDemande ?></h6>
@@ -54,17 +54,17 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-6 bg-secondary">
+        <div class="col-md-8 bg-secondary">
             <div>
-            
+            <p>toto</p>
             </div>
             <div>
         
             </div>
         </div>
-        <div class="row col-md-12">
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a></div>
-        </div>
+        <div class="row col-md-12 bg-light">
+            <a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="valider"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
+        </div>  
 </body>
 </html>

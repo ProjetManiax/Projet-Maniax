@@ -56,7 +56,6 @@
         </div>
         <div class="col-md-6 bg-secondary">
             <div>
-            
             </div>
             <div>
         
