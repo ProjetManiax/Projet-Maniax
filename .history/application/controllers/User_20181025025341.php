@@ -32,7 +32,7 @@ public function home(){
     $this->load->model("modelDemandes");
     $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
     $this->load->model("modelDeals");
-    $data["lesDeals"]=$this->modelDeals->getMesDeal($_SESSION['idUser']);
+    $data["lesDeals"]=$this->modelDeals->getMonDeal($_SESSION['idUser']);
     $data["nomService"]=$this->modelDeals->getNomService($_SESSION['idUser']);
     $this->load->view("viewAccueil.php",$data);
   }
@@ -253,13 +253,7 @@ function adDemande_view(){
 
 // fonctions propres aux deals
 
- function newdeal_view(){
-  $this->load->model("modelDemandes");
-  $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
-  $this->load->model("modelOffres");
-  $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
-  $this->load->view('viewDeal.php',$data);
- }
+
 
 }
 

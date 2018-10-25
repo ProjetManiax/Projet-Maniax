@@ -258,7 +258,7 @@ function adDemande_view(){
   $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
   $this->load->model("modelOffres");
   $data["lesOffres"]=$this->modelOffres->getAllOffresByIdUser($_SESSION['idUser']);
-  $this->load->view('viewDeal.php',$data);
+  $this->load->view('viewDeals.php',$data);
  }
 
 }

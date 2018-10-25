@@ -45,7 +45,7 @@
             <div id="retOffres">
                 <h1>Mes Offres <button title="Créer une nouvelle offre" type="button" class="btn btn-outline-primary" onclick="window.location.href='adOffre_view', '_blank'">+</button></h1>
             </div><br>
-            <p>Voici la liste de ce que je propose</p>
+            <p>Voici la liste de ce que je propos</p>
     <div id="divOffres" class="row align-items-center">    
         <?php foreach($lesOffres as $uneOffre){ ?> <br>
             <div class='col-md-4'>
@@ -94,7 +94,7 @@
     <article>
         <br><br>
         <div id="retDeals">
-        <h1>Mes Deals <button title="Rechercher un deal" type="button" class="btn btn-outline-primary" onclick="window.location.href='newdeal_view', '_blank'">+</button></h1>
+        <h1>Mes Deals <button title="Rechercher un deal" type="button" class="btn btn-outline-primary" onclick="window.location.href='test', '_blank'">+</button></h1>
         </div>
         <br>
         <p>Voici la liste de ce que j'ai échangé</p>
