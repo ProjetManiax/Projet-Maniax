@@ -25,7 +25,7 @@
 
                 $("div[name='mycard']").each(function( i ) {
                     var alt = $(this).attr("alt");
-                    if ( alt == 1 ) {
+                    if ( alt == 2 ) {
                         $(this).attr("class", "card text-white bg-danger mb-3 ")
                     }
                 });

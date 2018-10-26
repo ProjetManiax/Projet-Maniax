@@ -25,8 +25,10 @@
 
                 $("div[name='mycard']").each(function( i ) {
                     var alt = $(this).attr("alt");
-                    if ( alt == 1 ) {
-                        $(this).attr("class", "card text-white bg-danger mb-3 ")
+                    if ( this.style.color !== "blue" ) {
+                        this.style.color = "blue";
+                    } else {
+                        this.style.color = "";
                     }
                 });
                 
@@ -123,6 +125,9 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                     <script>
+                    if($("div[name='mycard']").attr("alt") == 1){
+                        $(this).attr("class", "card text-white bg-danger mb-3 ")
+                    };
                     </script>
                 </div>
                 </div>

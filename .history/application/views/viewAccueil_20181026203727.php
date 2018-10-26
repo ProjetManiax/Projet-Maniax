@@ -22,13 +22,6 @@
                 (function(){
                         demandeValues($(this).attr('value'));
                     });
-
-                $("div[name='mycard']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                    if ( alt == 1 ) {
-                        $(this).attr("class", "card text-white bg-danger mb-3 ")
-                    }
-                });
                 
             }
         );
@@ -123,6 +116,9 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                     <script>
+                    if($("div[name='mycard']").attr("alt") == 2){
+                        $("div[name='mycard']").attr("class", "card text-white bg-danger mb-3 ")
+                    };
                     </script>
                 </div>
                 </div>

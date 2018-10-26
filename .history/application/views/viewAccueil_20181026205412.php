@@ -23,10 +23,11 @@
                         demandeValues($(this).attr('value'));
                     });
 
-                $("div[name='mycard']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                    if ( alt == 1 ) {
-                        $(this).attr("class", "card text-white bg-danger mb-3 ")
+                $("div").each(function( i ) {
+                    if ( this.style.color !== "blue" ) {
+                        this.style.color = "blue";
+                    } else {
+                        this.style.color = "";
                     }
                 });
                 
@@ -111,7 +112,7 @@
         <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" alt="<?php echo $unDeal->idEtat ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
+            <div name="mycard" alt="<?php echo $unDeal->idEtat ;?>" style="bg-color:green;" class="card text-white mb-3" style="width: auto; ">
                 <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
                         <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
@@ -123,6 +124,9 @@
                         <button href="#" class="btn btn-primary lg">Afficher</button>
                     </div>
                     <script>
+                    if($("div[name='mycard']").attr("alt") == 1){
+                        $(this).attr("class", "card text-white bg-danger mb-3 ")
+                    };
                     </script>
                 </div>
                 </div>
