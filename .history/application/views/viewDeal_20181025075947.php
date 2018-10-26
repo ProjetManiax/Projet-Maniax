@@ -13,7 +13,7 @@
     $(document).ready(function() 
             {   
                  
-                $("#photoUser").click
+                $(".photoUser").click
                 (function(){
                     alert('toto');
                         //getOffres($(this).attr('value'));
