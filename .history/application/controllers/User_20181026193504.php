@@ -283,13 +283,7 @@ function adDemande_view(){
   $this->load->view('sesDemandes.php',$data);
 
 }
- 
-  function getNomUserClicked(){
-  $id = $_POST['id'];
-  $this->load->model("modelUser");
-  $data["nomUser"]=$this->modelUser->getUser($id);
-  $this->load->view('nomUserClicked.php',$data);
-  }
+
 }
 
 ?>

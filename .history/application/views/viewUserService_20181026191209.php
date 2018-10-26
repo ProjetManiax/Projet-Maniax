@@ -16,8 +16,7 @@
                 $("img[name='photoUser']").click
                 (function(){
                         getOffres($(this).attr('value'));
-                        getDemandes($(this).attr('value'));
-                        getNom($(this).attr('value'));
+                        //getDemandes($(this).attr('value'));
                     });
             }
         );

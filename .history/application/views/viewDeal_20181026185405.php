@@ -15,7 +15,8 @@
 
                 $("#recherche").keypress
                 (function(){
-                    rechercheUserForService($(this).val());
+                    //rechercheUserForService($(this).val());
+                    getOffres();
                     });
                 
             }
@@ -34,13 +35,13 @@
                 ?><br>
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
-                        <div class='col-md-3 bg-warning'>
+                        <div class='col-md-2 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text col-md-9 bg-success'>
-                           <h5><?php echo $uneDemande->nomService ?></h5>
+                        <div class='col-md-10 bg-success'>
+                            <h5><?php echo $uneDemande->nomService ?></h5>
                             <?php echo $uneDemande->descriptionDemande ?><br>
-                           <h6><?php echo $uneDemande->dateDemande ?></h6> 
+                            <h6><?php echo $uneDemande->dateDemande ?></h6>
                         </div>
                     </div>
                 </div>
@@ -53,10 +54,10 @@
                 ?><br>
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
-                        <div class='col-md-3 bg-warning'>
+                        <div class='col-md-2 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
-                        <div class='col-md-9 bg-success'>
+                        <div class='col-md-10 bg-success'>
                             <h5><?php echo $uneOffre->nomService ?></h5>
                             <?php echo $uneOffre->descriptionOffre ?><br>
                             <h6><?php echo $uneOffre->dateOffre ?></h6>
@@ -69,11 +70,11 @@
         <div class="col-md-7 bg-secondary">
             <div id="lesUsers">
             </div>
-            <h2 class="" align="center">Les demandes de <p name="nomUser"></p></h2>
-            <div id="sesDemandes">
+            <div>
+                <h2 class="" align="center">Les demandes de ...</h2>
             </div>
-            <h2 class="" align="center">Les offres de <p name="nomUser"></p></h2>
-            <div id="sesOffres">    
+            <div>
+                <h2 class="" align="center">Les offres de ...</h2>    
             </div>
         </div>
         <div class="row col-md-5 bg-secondary">

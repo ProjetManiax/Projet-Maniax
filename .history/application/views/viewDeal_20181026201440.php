@@ -37,10 +37,12 @@
                         <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text col-md-9 bg-success'>
-                           <h5><?php echo $uneDemande->nomService ?></h5>
+                        <div class="align-middle">
+                        <div class='card-text col-md-9 bg-success '>
+                            <?php echo $uneDemande->nomService ?><br>
                             <?php echo $uneDemande->descriptionDemande ?><br>
-                           <h6><?php echo $uneDemande->dateDemande ?></h6> 
+                            <?php echo $uneDemande->dateDemande ?>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +74,7 @@
             <h2 class="" align="center">Les demandes de <p name="nomUser"></p></h2>
             <div id="sesDemandes">
             </div>
-            <h2 class="" align="center">Les offres de <p name="nomUser"></p></h2>
+            <h2 class="" align="center">Les offres de <p name="nomUser">toto</p></h2>
             <div id="sesOffres">    
             </div>
         </div>

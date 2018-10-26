@@ -72,7 +72,7 @@
             <h2 class="" align="center">Les demandes de <p name="nomUser"></p></h2>
             <div id="sesDemandes">
             </div>
-            <h2 class="" align="center">Les offres de <p name="nomUser"></p></h2>
+            <h2 class="" align="center">Les offres de <p name="nomUser">toto</p></h2>
             <div id="sesOffres">    
             </div>
         </div>

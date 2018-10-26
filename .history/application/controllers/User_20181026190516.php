@@ -269,27 +269,13 @@ function adDemande_view(){
 
  }
 
- function allOffresByIdUser(){
-   $id = $_POST['id'];
+ function getAllOffresByIdUser(){
+   $id= $_POST['id'];
    $this->load->model("modelOffres");
    $data["sesOffres"]=$this->modelOffres->getAllOffresByIdUser($id);
-   $this->load->view('sesOffres.php',$data);
+
  }
 
- function allDemandesByIdUser(){
-  $id = $_POST['id'];
-  $this->load->model("modelDemandes");
-  $data["sesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($id);
-  $this->load->view('sesDemandes.php',$data);
-
-}
- 
-  function getNomUserClicked(){
-  $id = $_POST['id'];
-  $this->load->model("modelUser");
-  $data["nomUser"]=$this->modelUser->getUser($id);
-  $this->load->view('nomUserClicked.php',$data);
-  }
 }
 
 ?>

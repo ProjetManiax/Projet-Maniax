@@ -58,7 +58,8 @@ function rechercheUserForService($valueInput)
 
 function getOffres($id)
 {
-     $.ajax(
+     alert($id);
+    /* $.ajax(
         {
             async: true,
             type:"post",
@@ -74,51 +75,7 @@ function getOffres($id)
                 alert('Erreur SQL');
             }
         }
-        );
-}
-
-function getDemandes($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"allDemandesByIdUser",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("#sesDemandes").empty();
-                $("#sesDemandes").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
-}
-
-function getNom($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getNomUserClicked",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("p[name='nomUser']").empty();
-                $("p[name='nomUser']").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
+        );*/
 }
 
 

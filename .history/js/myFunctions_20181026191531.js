@@ -60,7 +60,6 @@ function getOffres($id)
 {
      $.ajax(
         {
-            async: true,
             type:"post",
             url:"allOffresByIdUser",
             data:"id="+$id,
@@ -68,50 +67,6 @@ function getOffres($id)
             {
                 $("#sesOffres").empty();
                 $("#sesOffres").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
-}
-
-function getDemandes($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"allDemandesByIdUser",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("#sesDemandes").empty();
-                $("#sesDemandes").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
-}
-
-function getNom($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getNomUserClicked",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("p[name='nomUser']").empty();
-                $("p[name='nomUser']").append(data);
             },
             error:function()
             {

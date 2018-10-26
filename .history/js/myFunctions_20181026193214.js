@@ -79,7 +79,6 @@ function getOffres($id)
 
 function getDemandes($id)
 {
-
      $.ajax(
         {
             async: true,
@@ -90,28 +89,6 @@ function getDemandes($id)
             {
                 $("#sesDemandes").empty();
                 $("#sesDemandes").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
-}
-
-function getNom($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getNomUserClicked",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("p[name='nomUser']").empty();
-                $("p[name='nomUser']").append(data);
             },
             error:function()
             {

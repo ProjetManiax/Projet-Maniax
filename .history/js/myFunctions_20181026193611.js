@@ -99,27 +99,5 @@ function getDemandes($id)
         );
 }
 
-function getNom($id)
-{
-
-     $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getNomUserClicked",
-            data:"id="+$id,
-            success:function(data)
-            {
-                $("p[name='nomUser']").empty();
-                $("p[name='nomUser']").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
-}
-
 
 
