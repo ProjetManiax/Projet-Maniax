@@ -42,14 +42,14 @@
                         <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text text-white col-md-9 bg-success'>
+                        <div class='card-text col-md-9 bg-success'>
                            <h5><?php echo $uneDemande->nomService ?></h5>
                             <?php echo $uneDemande->descriptionDemande ?><br>
                            <h6><?php echo $uneDemande->dateDemande ?></h6> 
                         </div>
                     </div>
                 </div>
-            </a>
+                </a>
                 <?php } ?>
             </div>
             <br>

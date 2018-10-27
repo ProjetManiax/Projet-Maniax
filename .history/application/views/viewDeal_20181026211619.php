@@ -23,12 +23,8 @@
     </script>
 </head>
 <body>
-
-    <div class="input-group mb-3 input-group-lg">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Rechercher</span>
-        </div>
-        <input type="text" id="recherche" class="form-control" value="" placeholder="Saisie le texte recherché dans une offre"><br>     
+    <div>
+        <input type="text" style="height: 20px;"id="recherche" class="col-md-12 bg-light" value="" placeholder="Saisie le texte recherché dans une offre"><br>
     </div>
     <div class="row">
         <div class="col-md-5">
@@ -36,20 +32,18 @@
                 <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <a href="">
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text text-white col-md-9 bg-success'>
+                        <div class='card-text col-md-9 bg-success'>
                            <h5><?php echo $uneDemande->nomService ?></h5>
                             <?php echo $uneDemande->descriptionDemande ?><br>
                            <h6><?php echo $uneDemande->dateDemande ?></h6> 
                         </div>
                     </div>
                 </div>
-            </a>
                 <?php } ?>
             </div>
             <br>
@@ -59,7 +53,7 @@
                 ?><br>
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
-                        <div class='col-md-3 bg-warning' >
+                        <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-9 bg-success'>

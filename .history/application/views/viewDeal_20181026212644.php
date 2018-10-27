@@ -36,20 +36,18 @@
                 <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <a href="">
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-3 bg-warning'>
                             <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text text-white col-md-9 bg-success'>
+                        <div class='card-text col-md-9 bg-success'>
                            <h5><?php echo $uneDemande->nomService ?></h5>
                             <?php echo $uneDemande->descriptionDemande ?><br>
                            <h6><?php echo $uneDemande->dateDemande ?></h6> 
                         </div>
                     </div>
                 </div>
-            </a>
                 <?php } ?>
             </div>
             <br>
@@ -60,7 +58,7 @@
                 <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-3 bg-warning' >
-                            <img class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
+                            <img align="center" class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-9 bg-success'>
                             <h5><?php echo $uneOffre->nomService ?></h5>
