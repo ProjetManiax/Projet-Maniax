@@ -1,1 +1,0 @@
-<?php echo $nomUser[0]->nomUser ?>
