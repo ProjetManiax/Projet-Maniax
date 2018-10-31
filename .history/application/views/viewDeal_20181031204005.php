@@ -29,11 +29,7 @@
 
                 $("div[name='mesOffres']").click
                 (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                    }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    }
                 });
             }
         );

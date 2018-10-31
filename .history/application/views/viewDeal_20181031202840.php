@@ -18,23 +18,10 @@
                     rechercheUserForService($(this).val());
                     });
                 
-                $("div[name='mesDemandes']").click
-                (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                    }else{
-                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    }
-                });
-
-                $("div[name='mesOffres']").click
-                (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                    }else{
-                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    }
-                });
+                function changeColor() {
+                    alert("toto sql")
+                    //$(this).attr("class", "card text-white bg-danger mb-3 ")
+                }
             }
         );
     </script>

@@ -18,23 +18,10 @@
                     rechercheUserForService($(this).val());
                     });
                 
-                $("div[name='mesDemandes']").click
-                (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                    }else{
-                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    }
-                });
-
-                $("div[name='mesOffres']").click
-                (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                    }else{
-                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    }
-                });
+                function changeColor() {
+                    alert("toto sql")
+                    //$(this).attr("class", "card text-white bg-danger mb-3 ")
+                }
             }
         );
     </script>
@@ -54,7 +41,7 @@
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
 
-                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; ">
+                <div class="card container-fluid" onclick="changeColor" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
@@ -78,7 +65,7 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; ">
+                <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
