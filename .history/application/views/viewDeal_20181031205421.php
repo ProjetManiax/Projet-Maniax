@@ -114,19 +114,19 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <button type="submit" class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button>
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
                 <div class="col-md-7">
-                <button class="btn btn-lg btn-primary btn-block" onclick="window.location.href='home';">HOME</button>
+                <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
                 </div>
             </div>
         </div>
 
-    </footer>
-    <br>&nbsp;
+    </footer><br>&nbsp;
+
 </section>
 </body>
 </html>

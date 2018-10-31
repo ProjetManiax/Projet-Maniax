@@ -30,7 +30,7 @@
          ?><br>
         <div class='card col-md-2 bg-warning' style="width: auto; height: 8rem;" align="center">     
             <img name="photoUser" class="imgResize" value="<?php echo $unUser->idUser ?>" src="<?php echo $unUser->photoUser ?>" alt="">
-            <p class="card-text"><b><?php echo $unUser->nomUser ?></b></p>
+            <p class="card-text"><?php echo $unUser->nomUser ?></p>
         </div>
         <?php } ?>
     </div>
