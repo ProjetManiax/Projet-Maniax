@@ -9,31 +9,14 @@
     <script src='../js/myFunctions.js'></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/creationDeal.css">
-    <script>
-    $(document).ready(function() 
-            {   
-
-                $("div[name='sesDemandes']").click
-                (function changeColor() {
-                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
-                        $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "1") 
-                    }else{
-                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "2")
-                    }
-                });
-
-            }
-        );
-    </script>
+    <script></script>
 </head>
 <body>
 <?php 
     echo "<div align=center><h2 class='enligne' align='center'>Les demandes de <p class='enligne' name='nomUser'></p></h2></div><br>";
     foreach($sesDemandes as $uneDemande){
             ?><br>
-                <div name="sesDemandes" class="card container-fluid" style="width: auto; height: auto; ">
+                <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >

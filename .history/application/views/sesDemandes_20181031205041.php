@@ -33,7 +33,7 @@
     echo "<div align=center><h2 class='enligne' align='center'>Les demandes de <p class='enligne' name='nomUser'></p></h2></div><br>";
     foreach($sesDemandes as $uneDemande){
             ?><br>
-                <div name="sesDemandes" class="card container-fluid" style="width: auto; height: auto; ">
+                <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >

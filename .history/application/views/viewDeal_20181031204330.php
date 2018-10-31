@@ -22,10 +22,8 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "1") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "2")
                     }
                 });
 
@@ -33,10 +31,8 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "1")
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "2")
                     }
                 });
             }
@@ -82,7 +78,7 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1">
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
