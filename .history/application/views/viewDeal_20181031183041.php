@@ -33,10 +33,10 @@
     <div class="row">
         <div class="col-md-5">
             <div>
-                <h2 align="center">Mes demandes</h2>
+                <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-
+            
                 <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
@@ -51,13 +51,13 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <?php } ?>
             </div>
         
             <br>
             <div>
-                <h2 class="" align="center">Mes offres</h2>
+                <h2 class="" align="center">MES OFFRES</h2>
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
@@ -79,11 +79,11 @@
             </div>
         </div>
         <div class="col-md-7 "> 
-        <h2 class="" align="center">Les utilisateurs proposant le service </h2><br>
+        <h2 class="" align="center">LES UTILISATEURS PROPOSANT LE SERVICE :</h2><br>
             <div id="lesUsers">
-            </div><br>
+            </div><br><br>
             <div id="sesDemandes">
-            </div><br>
+            </div>
             <div id="sesOffres">    
             </div>
         </div>
@@ -93,7 +93,7 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button></a>
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">

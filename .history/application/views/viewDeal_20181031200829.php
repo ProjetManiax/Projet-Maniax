@@ -36,8 +36,8 @@
                 <h2 align="center">Mes demandes</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-
-                <div class="card container-fluid" style="width: auto; height: auto; ">
+            <a href="" class="custom-card">
+                <div class="card container-fluid bg-primary" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
                             <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-
+            </a>
                 <?php } ?>
             </div>
         
@@ -93,7 +93,7 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button></a>
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">

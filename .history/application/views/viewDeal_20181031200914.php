@@ -36,7 +36,7 @@
                 <h2 align="center">Mes demandes</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-
+            <a href="" class="custom-card">
                 <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-
+            </a>
                 <?php } ?>
             </div>
         

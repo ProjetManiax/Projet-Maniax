@@ -5,7 +5,7 @@ display: inline;
 }
 </style>
 <?php 
-    echo "<div align=center><h2 class='enligne'>Les offres de <p class='enligne' name='nomUser'></p></h2></div><br>";
+    echo "<h2 class='enligne' align='center'>Les offres de <p class='enligne' name='nomUser'></p></h2><br>";
     foreach($sesOffres as $uneOffre){
             ?><br>
                 <div class="card container-fluid" style="width: auto; height: auto; ">

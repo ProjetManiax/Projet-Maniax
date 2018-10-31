@@ -1,10 +1,5 @@
-<style>
-.enligne
-{
-display: inline;
-}
-</style><?php 
-    echo "<div align=center><h2 class='enligne' align='center'>Les demandes de <p class='enligne' name='nomUser'></p></h2></div><br>";
+<?php 
+    echo "<h2  align='center'>Les demandes de <p name='nomUser'></p></h2>";
     foreach($sesDemandes as $uneDemande){
             ?><br>
                 <div class="card container-fluid" style="width: auto; height: auto; ">
@@ -19,8 +14,6 @@ display: inline;
                         <?php echo $uneDemande->dateDemande ?></p>
                         </div>
                         </div>
-                    </div>
-                    </div>
+                    </div></div>
                 </div>
 <?php } ?>
-<br>

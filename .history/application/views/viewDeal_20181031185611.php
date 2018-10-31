@@ -36,7 +36,7 @@
                 <h2 align="center">Mes demandes</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-
+            
                 <div class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-
+            
                 <?php } ?>
             </div>
         
@@ -70,7 +70,7 @@
                         <div class="card-block px-3">
                         <h6 class="card-title"><?php echo $uneOffre->nomService ?></h6>
                         <p class="card-text"><?php echo $uneOffre->descriptionOffre ?><br>
-                        <?php echo $uneOffre->dateOffre ?></p>
+                        <?php echo $uneOffre->dateOffre ?><input type="checkbox" align=right name="monOffre" id=""></p>
                         </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button></a>
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
