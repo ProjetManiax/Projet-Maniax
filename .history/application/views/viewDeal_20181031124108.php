@@ -78,8 +78,7 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-7 "> 
-        <h2 class="" align="center">LES UTILISATEURS PROPOSANT LE SERVICE :</h2><br>
+        <div class="col-md-7 bg-secondary">
             <div id="lesUsers">
             </div>
             <div id="sesDemandes">
@@ -87,24 +86,32 @@
             <div id="sesOffres">    
             </div>
         </div>
+        <div class="row col-md-12 bg-secondary ">
+            <div></div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div></div>
+        </div>
 
-    <footer class="page-footer font-small col-md-12 teal pt-4">
+    <footer class="page-footer font-small teal pt-4">
 
-        <div class="container-fluid text-center align-item-center">
+        <div class="container-fluid text-center text-md-left">
             <div class="row">
-                <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-7">
-                <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
                 </div>
             </div>
         </div>
 
-    </footer><br>
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        </div>
+
+    </footer>
 
 </section>
 </body>

@@ -93,12 +93,12 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER  </button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-7">
+                <div class="col-md-7 mb-md-0 mb-3">
                 <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
                 </div>
             </div>

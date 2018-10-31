@@ -31,7 +31,7 @@
     </div>
 <section class="container-fluid">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
             <div>
                 <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
@@ -78,7 +78,7 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-7 "> 
+        <div class="col-md-6 "> 
         <h2 class="" align="center">LES UTILISATEURS PROPOSANT LE SERVICE :</h2><br>
             <div id="lesUsers">
             </div>
@@ -92,13 +92,13 @@
 
         <div class="container-fluid text-center align-item-center">
             <div class="row">
-                <div class="col-md-5 ">
-                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER  </button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-7">
+                <div class="col-md-6 mb-md-0 mb-3">
                 <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
                 </div>
             </div>

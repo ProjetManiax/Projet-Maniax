@@ -78,8 +78,7 @@
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-7 "> 
-        <h2 class="" align="center">LES UTILISATEURS PROPOSANT LE SERVICE :</h2><br>
+        <div class="col-md-7 bg-secondary">
             <div id="lesUsers">
             </div>
             <div id="sesDemandes">
@@ -88,23 +87,23 @@
             </div>
         </div>
 
-    <footer class="page-footer font-small col-md-12 teal pt-4">
+    <footer class="page-footer font-small teal pt-4">
 
         <div class="container-fluid text-center align-item-center">
             <div class="row">
-                <div class="col-md-5 ">
+                <div class="col-md-6 mt-md-0 mt-3">
                     <a href="home"><button class="btn btn-lg btn-primary btn-block text-center">VALIDER</button></a>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-7">
-                <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button>
                 </div>
             </div>
         </div>
 
-    </footer><br>
+    </footer>
 
 </section>
 </body>

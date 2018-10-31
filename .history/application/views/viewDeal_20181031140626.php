@@ -98,7 +98,7 @@
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-7">
+                <div class="col-md-7 mb-md-0 mb-3">
                 <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >HOME</button></a>
                 </div>
             </div>
