@@ -23,73 +23,69 @@
     </script>
 </head>
 <body>
-    <div class=" container-fluid input-group mb-3 input-group-lg">
+
+    <div class="input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text">Rechercher</span>
         </div>
         <input type="text" id="recherche" class="form-control" value="" placeholder="Saisie le texte recherché dans une offre"><br>     
     </div>
-<section class="container-fluid">
-    <div class="row">
-        <div class="col-md-5">
-            <div>
+
                 <h2 align="center">MES DEMANDES</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            
-                <div class="card container-fluid" style="width: auto; height: auto; ">
-                    <div class="row">
-                        <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
-                        </div>
-                        <div class='col-md-10 px-3'>
-                        <div class="card-block px-3">
-                        <h6 class="card-title"><?php echo $uneDemande->nomService ?></h6>
-                        <p class="card-text"><?php echo $uneDemande->descriptionDemande ?><br>
-                        <?php echo $uneDemande->dateDemande ?></p>
-                        </div>
+                <section>
+                    <div class="container">
+                        <div class="card">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img class="w-100" src="<?php echo $uneDemande->photoService ?>" alt="" >
+                                </div>
+                                <div class="col-md-8 px-3">
+                                    <div class="card-block px-3">
+                                        <h4 class="card-title"><?php echo $uneDemande->nomService ?></h4>
+                                        <p class="card-text"><?php echo $uneDemande->descriptionDemande ?></p>
+                                        <p class="card-text"><?php echo $uneDemande->dateDemande ?></p>
+                                        <a href="#" class="btn btn-primary" align=right>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            
+                </section>
                 <?php } ?>
-            </div>
-        
-            <br>
+
+    <br>
             <div>
                 <h2 class="" align="center">MES OFFRES</h2>
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
-                
-                <div class="card container-fluid" style="width: auto; height: auto; ">
+                <div class="card" style="width: auto; height: auto; ">
                     <div class="row">
-                        <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
+                        <div class='col-md-3 bg-warning' >
+                            <img class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
-                        <div class='col-md-10 px-3'>
-                        <div class="card-block px-3">
-                        <h6 class="card-title"><?php echo $uneOffre->nomService ?></h6>
-                        <p class="card-text"><?php echo $uneOffre->descriptionOffre ?><br>
-                        <?php echo $uneOffre->dateOffre ?></p>
-                        </div>
+                        <div class='col-md-9 bg-success'>
+                            <h5><?php echo $uneOffre->nomService ?></h5>
+                            <?php echo $uneOffre->descriptionOffre ?><br>
+                            <h6><?php echo $uneOffre->dateOffre ?></h6>
                         </div>
                     </div>
-                </div>      
+                </div>
                 <?php } ?>
             </div>
         </div>
         <div class="col-md-7 bg-secondary">
-            <div id="lesUsers">
+            <div id="lesUsers">Toto
             </div>
             <div id="sesDemandes">
             </div>
             <div id="sesOffres">    
             </div>
         </div>
-        <div class="row col-md-12 bg-secondary ">
+        <div class="row col-md-5 bg-secondary">
             <div><a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
             <div><a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a></div>
         </div>
-    </section>
 </body>
 </html>

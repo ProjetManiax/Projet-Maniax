@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="row col-md-12 bg-secondary ">
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div><a href="home"><button class="btn btn-lg btn-primary col-md-6btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
             <div><a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a></div>
         </div>
     </section>
