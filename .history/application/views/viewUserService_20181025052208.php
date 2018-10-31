@@ -1,1 +1,0 @@
-<img class="imgResize" src="<?php echo $photoUser ?>" alt="" >

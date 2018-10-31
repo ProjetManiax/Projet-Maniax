@@ -6,3 +6,13 @@
 	width:90px;
 	height:90px;
 }
+
+.enligne
+{
+display: inline;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}

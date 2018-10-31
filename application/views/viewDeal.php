@@ -18,71 +18,115 @@
                     rechercheUserForService($(this).val());
                     });
                 
+                $("div[name='mesDemandes']").click
+                (function changeColor() {
+                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
+                        $(this).attr("class", "card container-fluid")
+                        $(this).attr("alt", "1") 
+                    }else{
+                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
+                    $(this).attr("alt", "2")
+                    }
+                });
+
+                $("div[name='mesOffres']").click
+                (function changeColor() {
+                    if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
+                        $(this).attr("class", "card container-fluid")
+                        $(this).attr("alt", "1")
+                    }else{
+                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
+                    $(this).attr("alt", "2")
+                    }
+                });
             }
         );
     </script>
 </head>
 <body>
-
-    <div class="input-group mb-3 input-group-lg">
+    <div class=" container-fluid input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text">Rechercher</span>
         </div>
         <input type="text" id="recherche" class="form-control" value="" placeholder="Saisie le texte recherché dans une offre"><br>     
     </div>
+<section class="container-fluid">
     <div class="row">
         <div class="col-md-5">
             <div>
-                <h2 align="center">MES DEMANDES</h2>
+                <h2 align="center">Mes demandes</h2>
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
-            <a href="">
-                <div class="card" style="width: auto; height: auto; ">
+
+                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
-                        <div class='col-md-3 bg-warning'>
-                            <img class="imgResize" src="<?php echo $uneDemande->photoService ?>" alt="" >
+                        <div class='col-md-2'>
+                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
-                        <div class='card-text text-white col-md-9 bg-success'>
-                           <h5><?php echo $uneDemande->nomService ?></h5>
-                            <?php echo $uneDemande->descriptionDemande ?><br>
-                           <h6><?php echo $uneDemande->dateDemande ?></h6> 
+                        <div class='col-md-10 px-3'>
+                        <div class="card-block px-3">
+                        <h6 class="card-title"><?php echo $uneDemande->nomService ?></h6>
+                        <p class="card-text"><?php echo $uneDemande->descriptionDemande ?><br>
+                        <?php echo $uneDemande->dateDemande ?></p>
+                        </div>
                         </div>
                     </div>
                 </div>
-            </a>
+
                 <?php } ?>
             </div>
+        
             <br>
             <div>
-                <h2 class="" align="center">MES OFFRES</h2>
+                <h2 class="" align="center">Mes offres</h2>
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
-                <div class="card" style="width: auto; height: auto; ">
+                
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
-                        <div class='col-md-3 bg-warning' >
-                            <img class="imgResize" src="<?php echo $uneOffre->photoService ?>" alt="" >
+                        <div class='col-md-2'>
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
-                        <div class='col-md-9 bg-success'>
-                            <h5><?php echo $uneOffre->nomService ?></h5>
-                            <?php echo $uneOffre->descriptionOffre ?><br>
-                            <h6><?php echo $uneOffre->dateOffre ?></h6>
+                        <div class='col-md-10 px-3'>
+                        <div class="card-block px-3">
+                        <h6 class="card-title"><?php echo $uneOffre->nomService ?></h6>
+                        <p class="card-text"><?php echo $uneOffre->descriptionOffre ?><br>
+                        <?php echo $uneOffre->dateOffre ?></p>
+                        </div>
                         </div>
                     </div>
-                </div>
+                </div>      
                 <?php } ?>
             </div>
         </div>
-        <div class="col-md-7 bg-secondary">
+        <div class="col-md-7 "> 
+        <h2 class="" align="center">Les utilisateurs proposant le service </h2><br>
             <div id="lesUsers">
-            </div>
+            </div><br>
             <div id="sesDemandes">
-            </div>
+            </div><br>
             <div id="sesOffres">    
             </div>
         </div>
-        <div class="row col-md-5 bg-secondary">
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block">VALIDER</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div><a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a></div>
+
+    <footer class="page-footer font-small col-md-12 teal pt-4">
+
+        <div class="container-fluid text-center align-item-center">
+            <div class="row">
+                <div class="col-md-5 ">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button>
+                </div>
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <div class="col-md-7">
+                <button class="btn btn-lg btn-primary btn-block" onclick="window.location.href='home';">HOME</button>
+                </div>
+            </div>
         </div>
+
+    </footer>
+    <br>&nbsp;
+</section>
 </body>
 </html>
