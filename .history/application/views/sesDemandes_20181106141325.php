@@ -20,7 +20,7 @@
                         $(this).attr("alt", "saDemande") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "saDemandeCliquee")
+                    $(this).attr("alt", "saDemandeClickee")
                     }
                 });
 

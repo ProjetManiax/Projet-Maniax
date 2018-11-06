@@ -25,7 +25,7 @@
                         $(this).attr("alt", "maDemande") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "maDemandeCliquee")
+                    $(this).attr("alt", "maDemandeClickee")
                     }
                 });
 
@@ -36,7 +36,7 @@
                         $(this).attr("alt", "monOffre")
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "monOffreCliquee")
+                    $(this).attr("alt", "monOffreClickee")
                     }
                 });
             }

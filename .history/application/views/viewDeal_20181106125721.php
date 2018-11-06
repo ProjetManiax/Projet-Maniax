@@ -22,10 +22,10 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "maDemande") 
+                        $(this).attr("alt", "1") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "maDemandeCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
 
@@ -33,10 +33,10 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "monOffre")
+                        $(this).attr("alt", "1")
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "monOffreCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
             }

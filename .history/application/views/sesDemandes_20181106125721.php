@@ -17,10 +17,10 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "saDemande") 
+                        $(this).attr("alt", "1") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "saDemandeCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
 
