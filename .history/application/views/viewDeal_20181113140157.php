@@ -44,28 +44,9 @@
                 (function creerDeal() {
                     $("div[name='mesOffres']").each(function( i ) {
                     var alt = $(this).attr("alt");
-                        if(alt == "monOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='mesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "maDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "sonOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "saDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    })
+                    if($(this).attr("alt") == "monOffreCliquee"){
+                    alert($(this).val());
+                    };
                 });
 
             }
