@@ -72,10 +72,10 @@
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
 
-                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneDemande->idDemande ?>">
+                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="1" value="<?php echo $uneDemande->idDemande ?>">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
@@ -96,10 +96,10 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneOffre->idOffre ?>">
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1" value="<?php echo $uneOffre->idOffre ?>">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">

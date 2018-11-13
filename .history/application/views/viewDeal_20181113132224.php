@@ -40,9 +40,8 @@
                     }
                 });
                 
-                $("#valider").click
+                $("div[name='mesOffres']").click
                 (function creerDeal() {
-
 
                     /*if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
@@ -72,10 +71,10 @@
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
 
-                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneDemande->idDemande ?>">
+                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
@@ -96,10 +95,10 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneOffre->idOffre ?>">
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
