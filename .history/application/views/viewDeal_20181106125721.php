@@ -22,10 +22,10 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "maDemande") 
+                        $(this).attr("alt", "1") 
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "maDemandeCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
 
@@ -33,41 +33,12 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "monOffre")
+                        $(this).attr("alt", "1")
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "monOffreCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
-                
-                $("#valider").click
-                (function creerDeal() {
-                    $("div[name='mesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "monOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='mesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "maDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "sonOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "saDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    })
-                });
-
             }
         );
     </script>
@@ -87,10 +58,10 @@
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
 
-                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneDemande->idDemande ?>">
+                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
@@ -111,10 +82,10 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneOffre->idOffre ?>">
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
@@ -143,7 +114,7 @@
         <div class="container-fluid text-center align-item-center">
             <div class="row">
                 <div class="col-md-5 ">
-                    <button id="valider" value="valider" class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block text-center bg-success">VALIDER</button>
                 </div>
 
                 <hr class="clearfix w-100 d-md-none pb-3">

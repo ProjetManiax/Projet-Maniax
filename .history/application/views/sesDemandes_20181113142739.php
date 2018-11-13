@@ -24,6 +24,16 @@
                     }
                 });
 
+               /* $("#valider").click
+                (function creerDeal() {
+                    $("div[name='sesDemandes']").each(function( i ) {
+                    var alt = $(this).attr("alt");
+                        if(alt == "saDemandeCliquee"){
+                        alert($(this).attr("value"));
+                        }
+                    })
+                });*/
+
             }
         );
     </script>

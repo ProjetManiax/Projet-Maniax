@@ -53,18 +53,6 @@
                         if(alt == "maDemandeCliquee"){
                         alert($(this).attr("value"));
                         }
-                    });
-                    $("div[name='sesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "sonOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "saDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
                     })
                 });
 

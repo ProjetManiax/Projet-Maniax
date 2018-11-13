@@ -42,30 +42,15 @@
                 
                 $("#valider").click
                 (function creerDeal() {
-                    $("div[name='mesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "monOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='mesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "maDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesOffres']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "sonOffreCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    });
-                    $("div[name='sesDemandes']").each(function( i ) {
-                    var alt = $(this).attr("alt");
-                        if(alt == "saDemandeCliquee"){
-                        alert($(this).attr("value"));
-                        }
-                    })
+
+
+                    /*if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
+                        $(this).attr("class", "card container-fluid")
+                        $(this).attr("alt", "monOffre")
+                    }else{
+                    $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
+                    $(this).attr("alt", "monOffreCliquee")
+                    }*/
                 });
 
             }
@@ -87,10 +72,10 @@
                 <?php foreach($lesDemandes as $uneDemande){
                 ?><br>
 
-                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneDemande->idDemande ?>">
+                <div name="mesDemandes" class="card container-fluid" style="width: auto; height: auto; " alt="1" value="<?php echo $uneDemande->idDemande ?>">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneDemande->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
@@ -111,10 +96,10 @@
                 <?php foreach($lesOffres as $uneOffre){
                 ?><br>
                 
-                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="" value="<?php echo $uneOffre->idOffre ?>">
+                <div name="mesOffres" class="card container-fluid" style="width: auto; height: auto; " alt="1" value="<?php echo $uneOffre->idOffre ?>">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" >
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">

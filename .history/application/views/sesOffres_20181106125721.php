@@ -17,10 +17,10 @@
                 (function changeColor() {
                     if ($(this).attr("class") == "card container-fluid text-white bg-primary mb-3 " ){
                         $(this).attr("class", "card container-fluid")
-                        $(this).attr("alt", "sonOffre")
+                        $(this).attr("alt", "1")
                     }else{
                     $(this).attr("class", "card container-fluid text-white bg-primary mb-3 ")
-                    $(this).attr("alt", "sonOffreCliquee")
+                    $(this).attr("alt", "2")
                     }
                 });
             }
@@ -32,10 +32,10 @@
     echo "<div align=center><h2 class='enligne'>Les offres de <p class='enligne' name='nomUser'></p></h2></div><br>";
     foreach($sesOffres as $uneOffre){
             ?><br>
-                <div name="sesOffres" class="card container-fluid" style="width: auto; height: auto;" alt="" value="<?php echo $uneOffre->idOffre ?>">
+                <div name="sesOffres" class="card container-fluid" style="width: auto; height: auto; ">
                     <div class="row">
                         <div class='col-md-2'>
-                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>">
+                            <img class="imgResize w-125" src="<?php echo $uneOffre->photoService ?>" alt="" >
                         </div>
                         <div class='col-md-10 px-3'>
                         <div class="card-block px-3">
