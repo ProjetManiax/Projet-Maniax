@@ -135,7 +135,7 @@ function verificationDeal($lesClicks)
             data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
             success:function(data)
             {
-                window.location.href="test_view";
+                alert("Création du deal réussi vous pouvez le visionner sur la page d'accueil !")
             },
             error:function()
             {

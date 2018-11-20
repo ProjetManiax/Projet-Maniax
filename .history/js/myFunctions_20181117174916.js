@@ -123,26 +123,11 @@ function getNom($id)
 
 function verificationDeal($lesClicks)
 {   
-    $monOffreCliquee = $lesClicks[0];
-    $maDemandeCliquee = $lesClicks[1];
-    $sonOffreCliquee = $lesClicks[2];
-    $saDemandeCliquee = $lesClicks[3];
-    $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
-            success:function(data)
-            {
-                window.location.href="test_view";
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-    );
+    var monOffreCliquee = $lesClicks[0];
+    var maDemandeCliquee = $lesClicks[1];
+    var sonOffreCliquee = $lesClicks[2];
+    var saDemandeCliquee = $lesClicks[3];
+    alert($monOffreCliquee);
 }
 
 

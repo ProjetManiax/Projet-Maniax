@@ -290,20 +290,6 @@ function adDemande_view(){
   $data["nomUser"]=$this->modelUser->getUser($id);
   $this->load->view('nomUserClicked.php',$data);
   }
-
-  function getIdOffresDemandesClicked(){
-    $monOffreCliquee = $_POST['monOffreCliquee'];
-    $maDemandeCliquee = $_POST['maDemandeCliquee'];
-    $sonOffreCliquee = $_POST['sonOffreCliquee'];
-    $saDemandeCliquee = $_POST['saDemandeCliquee'];
-    $this->load->model("modelDeals");
-    $_SESSION["monOffreEgalSaDemande"] = $this->modelDeals->verifMonOffreSaDemande($monOffreCliquee, $saDemandeCliquee);
-    
-  }
-
-  function test_view(){
-    $this->load->view('test.php',$_SESSION["monOffreEgalSaDemande"]);
-  }
 }
 
 ?>

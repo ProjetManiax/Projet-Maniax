@@ -292,17 +292,12 @@ function adDemande_view(){
   }
 
   function getIdOffresDemandesClicked(){
-    $monOffreCliquee = $_POST['monOffreCliquee'];
-    $maDemandeCliquee = $_POST['maDemandeCliquee'];
-    $sonOffreCliquee = $_POST['sonOffreCliquee'];
-    $saDemandeCliquee = $_POST['saDemandeCliquee'];
-    $this->load->model("modelDeals");
-    $_SESSION["monOffreEgalSaDemande"] = $this->modelDeals->verifMonOffreSaDemande($monOffreCliquee, $saDemandeCliquee);
-    
-  }
-
-  function test_view(){
-    $this->load->view('test.php',$_SESSION["monOffreEgalSaDemande"]);
+    $data["monOffreCliquee"] = $_POST['monOffreCliquee'];
+    $data["maDemandeCliquee"] = $_POST['maDemandeCliquee'];
+    $data["sonOffreCliquee"] = $_POST['sonOffreCliquee'];
+    $data["saDemandeCliquee"] = $_POST['saDemandeCliquee'];
+    $this->session->set_flashdata('success_msg', "Création de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
+    redirect('user/newdeal_view');
   }
 }
 

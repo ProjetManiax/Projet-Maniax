@@ -11,14 +11,7 @@ class modelDeals extends CI_model{
     }
 
     function verifMonOffreSaDemande($monOffreCliquee, $saDemandeCliquee){
-        $sql = $this->db->query("select service.idService as test from service inner JOIN offre on service.idService=offre.idOffre WHERE offre.idOffre =".$monOffreCliquee);
-        $sql2 = $this->db->query("select service.idService as test from service inner JOIN demande on service.idService=demande.idDemande WHERE demande.idDemande =".$saDemandeCliquee);      
-        echo var_dump($sql->result()[0]);
-
-        if($sql->result()[0]->test == $sql2->result()[0]->test){
-            return true;
-        }
-        return false;
+        alert
     }
 }
 

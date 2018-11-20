@@ -123,19 +123,15 @@ function getNom($id)
 
 function verificationDeal($lesClicks)
 {   
-    $monOffreCliquee = $lesClicks[0];
-    $maDemandeCliquee = $lesClicks[1];
-    $sonOffreCliquee = $lesClicks[2];
-    $saDemandeCliquee = $lesClicks[3];
     $.ajax(
         {
             async: true,
             type:"post",
             url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
+            data:"lesClicks="+$lesClicks,
             success:function(data)
             {
-                window.location.href="test_view";
+                alert("Création du deal réussi vous pouvez le visionner sur la page d'accueil !")
             },
             error:function()
             {

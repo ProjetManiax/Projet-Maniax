@@ -132,10 +132,10 @@ function verificationDeal($lesClicks)
             async: true,
             type:"post",
             url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
+            data:"lesClicks="+$lesClicks,
             success:function(data)
             {
-                window.location.href="test_view";
+                alert("Création du deal réussi vous pouvez le visionner sur la page d'accueil !")
             },
             error:function()
             {
@@ -143,6 +143,7 @@ function verificationDeal($lesClicks)
             }
         }
     );
+    alert($monOffreCliquee);
 }
 
 

@@ -302,7 +302,7 @@ function adDemande_view(){
   }
 
   function test_view(){
-    $this->load->view('test.php',$_SESSION["monOffreEgalSaDemande"]);
+   // $this->load->view('test.php',$_SESSION["monOffreEgalSaDemande"]);
   }
 }
 
