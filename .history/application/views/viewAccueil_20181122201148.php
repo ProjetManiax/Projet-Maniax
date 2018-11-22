@@ -125,7 +125,7 @@
                         <h5><?php echo $unDeal->nomService ?></h5>
                         <h5><?php echo $unDeal->dateDeal ?></h5>
                         <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
-                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal->idDeal ?>">Afficher</button>
+                        <button class="btn btn-primary lg" value="<?php echo $unDeal->idDeal ?>">Afficher</button>
                     </div>
                     <script>
                     </script>

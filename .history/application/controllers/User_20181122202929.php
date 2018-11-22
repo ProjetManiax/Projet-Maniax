@@ -237,6 +237,17 @@ public function getDemandeByIdDemande(){
   $this->load->view('setDemande.php',$data);
 }
 
+public function getDealByIdDeal(){
+  $idDeal = $_POST['idDeal'];
+  $this->load->model("modelDeals");
+  $_SESSION['deal']=$this->modelDeals->getInfosDeal($idDeal);
+  $this->load->view('setDeal.php',$data);
+}
+
+public function setDeal_view(){
+  $this->load->view('setDeal.php',$_SESSION['deal']);
+}
+
 function adDemande_view(){
 
   $this->load->model("modelDemandes");
@@ -285,17 +296,6 @@ function adDemande_view(){
   $this->load->model("modelUser");
   $data["nomUser"]=$this->modelUser->getUser($id);
   $this->load->view('nomUserClicked.php',$data);
-  }
-
-  public function getDealByIdDeal(){
-    $idDeal = $_POST['idDeal'];
-    $this->load->model("modelDeals");
-    $_SESSION['deal']=$this->modelDeals->getInfosDeal($idDeal);
-    $this->load->view('setDeal.php',$data);
-  }
-  
-  public function setDeal_view(){
-    $this->load->view('setDeal.php',$_SESSION['deal']);
   }
 
 

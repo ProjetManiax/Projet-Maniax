@@ -11,7 +11,7 @@ class modelDeals extends CI_model{
     }
 
     function getInfosDeal($idDeal){
-        $sql = $this->db->query("select idDeal, idOffreUser1, idOffreUser2, noteUser1, noteUser2 from deal where idDeal =".$idDeal);
+        $sql = $this->db->query("select idDeal, idOffreUser1, idOffreUser2, noteUser1, noteUser2 where idDeal =".$idDeal);
         return $sql->result();
     }
 
