@@ -23,11 +23,6 @@
                         demandeValues($(this).attr('value'));
                     });
 
-                $("button[name='deal']").click
-                (function(){
-                        dealValues($(this).attr('value'));
-                    });
-
                 $("div[name='mycard']").each(function( i ) {
                     var alt = $(this).attr("alt");
                     if ( alt == 1 ) {
@@ -125,7 +120,7 @@
                         <h5><?php echo $unDeal->nomService ?></h5>
                         <h5><?php echo $unDeal->dateDeal ?></h5>
                         <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
-                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal->idDeal ?>">Afficher</button>
+                        <button onclick="window.location.href='setDeal_view'" class="btn btn-primary lg">Afficher</button>
                     </div>
                     <script>
                     </script>

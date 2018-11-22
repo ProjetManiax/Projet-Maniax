@@ -36,25 +36,6 @@ function demandeValues($idDemande)
     );
 }
 
-function dealValues($idDeal)
-{
-    $.ajax(
-    {
-        type:"post",
-        url:"getDealByIdDeal",
-        data:"idDeal="+$idDeal,
-        success:function(data)
-        {
-            window.location.href="setDeal_view";
-        },
-        error:function()
-        {
-            alert('Erreur SQL');
-        }
-    }
-    );
-}
-
 function rechercheUserForService($valueInput)
 {
     $.ajax(
@@ -151,10 +132,10 @@ function verificationDeal($lesClicks)
             async: true,
             type:"post",
             url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
+            data:"lesClicks="+$lesClicks,
             success:function(data)
             {
-                window.location.href="newdeal_view";
+                alert("Création du deal réussi vous pouvez le visionner sur la page d'accueil !")
             },
             error:function()
             {
@@ -162,6 +143,7 @@ function verificationDeal($lesClicks)
             }
         }
     );
+    alert($monOffreCliquee);
 }
 
 

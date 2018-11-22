@@ -216,6 +216,8 @@ public function set_demande(){
     );
     print_r($demande);
 
+  $register_offre=true;
+
   if(!empty($demande)){
     $this->load->model("modelDemandes");
     $this->modelDemandes->set_demande($idDemande,$demande);
@@ -289,79 +291,16 @@ function adDemande_view(){
   $this->load->view('nomUserClicked.php',$data);
   }
 
-  public function getDealByIdDeal(){
-    $idDeal = $_POST['idDeal'];
-    $this->load->model("modelDeals");
-    $_SESSION['deal']=$this->modelDeals->getInfosDeal($idDeal);
-    $_SESSION["nomService"]=$this->modelDeals->getNomService2($idDeal);
-    $this->load->view('setDeal.php',$data);
-  }
-
-  public function set_deal(){
-    $idDeal= $this->input->post('idDeal');
-    $deal=array(
-  
-      'noteUser1'=>$this->input->post('maNote'),
-  
-      );
-      print_r($deal);
-  
-    if(!empty($deal)){
-      $this->load->model("modelDeals");
-      $this->modelDeals->set_deal($idDeal,$deal);
-      $this->session->set_flashdata('success_msg', "Notation du deal réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-      redirect('user/setDeal_view');
-    }
-    else{
-      $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
-      redirect('user/setDeal_view');
-    }
-  }
-  
-  public function setDeal_view(){
-    $this->load->view('setDeal.php',$_SESSION['deal']);
-  }
-
-
   function getIdOffresDemandesClicked(){
     $monOffreCliquee = $_POST['monOffreCliquee'];
     $maDemandeCliquee = $_POST['maDemandeCliquee'];
     $sonOffreCliquee = $_POST['sonOffreCliquee'];
     $saDemandeCliquee = $_POST['saDemandeCliquee'];
-
-    $deal=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
-      'idOffreUser1'=>$monOffreCliquee,
-      'idOffreUser2'=>$saDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
-  
-      ); 
-
-    $deal2=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
-      'idOffreUser1'=>$sonOffreCliquee,
-      'idOffreUser2'=>$maDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
-      );   
-
     $this->load->model("modelDeals");
-    $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee);
-    if ($_SESSION["verificationFinale"] == true){
-      $this->modelDeals->insererDeal($deal);
-      $this->modelDeals->insererDeal($deal2);
-      $this->session->set_flashdata('success_msg', "Création du deal réussie ! Vous pouvez retourner le visualiser sur la page d'accueil");
-    } else {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, essayez à nouveau.");
-    }
+    $data["monOffreEgalSaDemande"] = $this->modelDeals->verifMonOffreSaDemande($monOffreCliquee, $saDemandeCliquee);
+    $this->load->view('test.php',$data);
   }
+
 }
 
 ?>

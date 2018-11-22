@@ -36,25 +36,6 @@ function demandeValues($idDemande)
     );
 }
 
-function dealValues($idDeal)
-{
-    $.ajax(
-    {
-        type:"post",
-        url:"getDealByIdDeal",
-        data:"idDeal="+$idDeal,
-        success:function(data)
-        {
-            window.location.href="setDeal_view";
-        },
-        error:function()
-        {
-            alert('Erreur SQL');
-        }
-    }
-    );
-}
-
 function rechercheUserForService($valueInput)
 {
     $.ajax(
@@ -154,7 +135,7 @@ function verificationDeal($lesClicks)
             data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
             success:function(data)
             {
-                window.location.href="newdeal_view";
+                alert("Création du deal réussi vous pouvez le visionner sur la page d'accueil !")
             },
             error:function()
             {

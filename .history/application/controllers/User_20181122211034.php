@@ -216,6 +216,8 @@ public function set_demande(){
     );
     print_r($demande);
 
+  $register_offre=true;
+
   if(!empty($demande)){
     $this->load->model("modelDemandes");
     $this->modelDemandes->set_demande($idDemande,$demande);
@@ -301,20 +303,23 @@ function adDemande_view(){
     $idDeal= $this->input->post('idDeal');
     $deal=array(
   
-      'noteUser1'=>$this->input->post('maNote'),
+      'noteUser1'=>$this->input->post('descriptionDemande'),
+      'dateDemande'=>$this->input->post('dateDemande'),
   
       );
-      print_r($deal);
+      print_r($demande);
   
-    if(!empty($deal)){
-      $this->load->model("modelDeals");
-      $this->modelDeals->set_deal($idDeal,$deal);
-      $this->session->set_flashdata('success_msg', "Notation du deal réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
-      redirect('user/setDeal_view');
+    $register_offre=true;
+  
+    if(!empty($demande)){
+      $this->load->model("modelDemandes");
+      $this->modelDemandes->set_demande($idDemande,$demande);
+      $this->session->set_flashdata('success_msg', "Modification de la demande réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
+      redirect('user/setDemande_view');
     }
     else{
       $this->session->set_flashdata('error_msg', "Une erreur s'est produite, essayez à nouveau.");
-      redirect('user/setDeal_view');
+      redirect('user/setDemande_view');
     }
   }
   

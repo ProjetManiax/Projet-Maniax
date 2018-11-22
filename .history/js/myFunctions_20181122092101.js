@@ -36,25 +36,6 @@ function demandeValues($idDemande)
     );
 }
 
-function dealValues($idDeal)
-{
-    $.ajax(
-    {
-        type:"post",
-        url:"getDealByIdDeal",
-        data:"idDeal="+$idDeal,
-        success:function(data)
-        {
-            window.location.href="setDeal_view";
-        },
-        error:function()
-        {
-            alert('Erreur SQL');
-        }
-    }
-    );
-}
-
 function rechercheUserForService($valueInput)
 {
     $.ajax(

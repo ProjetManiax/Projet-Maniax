@@ -46,24 +46,28 @@
                     $("div[name='mesOffres']").each(function( i ) {
                     var alt = $(this).attr("alt");
                         if(alt == "monOffreCliquee"){
+                        alert($(this).attr("value"));
                         lesClicks.push($(this).attr("value"));
                         }
                     });
                     $("div[name='mesDemandes']").each(function( i ) {
                     var alt = $(this).attr("alt");
                         if(alt == "maDemandeCliquee"){
+                        alert($(this).attr("value"));
                         lesClicks.push($(this).attr("value"));
                         }
                     });
                     $("div[name='sesOffres']").each(function( i ) {
                     var alt = $(this).attr("alt");
                         if(alt == "sonOffreCliquee"){
+                        alert($(this).attr("value"));
                         lesClicks.push($(this).attr("value"));
                         }
                     });
                     $("div[name='sesDemandes']").each(function( i ) {
                     var alt = $(this).attr("alt");
                         if(alt == "saDemandeCliquee"){
+                        alert($(this).attr("value"));
                         lesClicks.push($(this).attr("value"))
                         }
                     })
@@ -75,25 +79,6 @@
     </script>
 </head>
 <body>
-<?php
-$success_msg= $this->session->flashdata('success_msg');
-$error_msg= $this->session->flashdata('error_msg');
-
-if($success_msg){
-?>
-<div class="alert alert-success">
-    <?php echo $success_msg; ?>
-</div>
-<?php
-}
-if($error_msg){
-?>
-<div class="alert alert-danger">
-    <?php echo $error_msg; ?>
-</div>
-<?php
-}
-?>
     <div class=" container-fluid input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text">Rechercher</span>

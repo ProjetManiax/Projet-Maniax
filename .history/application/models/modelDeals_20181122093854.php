@@ -1,28 +1,13 @@
 <?php
 class modelDeals extends CI_model{
     function getMesDeal($idUser){
-        $sql = $this->db->query("select nomUser, photoUser, nomService, idDeal, dateDeal, idEtat, noteUser1, noteUser2, idEtat from deal inner join offre on idOffreUser2 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idCreateur =".$idUser);
+        $sql = $this->db->query("select nomUser, photoUser, nomService, dateDeal, idEtat, noteUser1, noteUser2, idEtat from deal inner join offre on idOffreUser2 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idCreateur =".$idUser);
         return $sql->result();
     }
 
     function getNomService($idUser){
         $sql = $this->db->query("select nomService as 'nomService2' from deal inner join offre on idOffreUser1 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idCreateur =".$idUser);
         return $sql->result();
-    }
-
-    function getInfosDeal($idDeal){
-        $sql = $this->db->query("select nomUser, photoUser, nomService, idDeal, dateDeal, idEtat, noteUser1, noteUser2, idEtat from deal inner join offre on idOffreUser2 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idDeal =".$idDeal);
-        return $sql->result();
-    }
-
-    function getNomService2($idDeal){
-        $sql = $this->db->query("select nomService from deal inner join offre on idOffreUser1 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idDeal =".$idDeal);
-        return $sql->result();
-    }
-
-    function set_deal($idDeal,$deal){
-        $this->db->where('idDeal', $idDeal);
-        $this->db->update('deal', $deal);
     }
 
     function verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){

@@ -36,25 +36,6 @@ function demandeValues($idDemande)
     );
 }
 
-function dealValues($idDeal)
-{
-    $.ajax(
-    {
-        type:"post",
-        url:"getDealByIdDeal",
-        data:"idDeal="+$idDeal,
-        success:function(data)
-        {
-            window.location.href="setDeal_view";
-        },
-        error:function()
-        {
-            alert('Erreur SQL');
-        }
-    }
-    );
-}
-
 function rechercheUserForService($valueInput)
 {
     $.ajax(
@@ -140,29 +121,7 @@ function getNom($id)
         );
 }
 
-function verificationDeal($lesClicks)
-{   
-    $monOffreCliquee = $lesClicks[0];
-    $maDemandeCliquee = $lesClicks[1];
-    $sonOffreCliquee = $lesClicks[2];
-    $saDemandeCliquee = $lesClicks[3];
-    $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
-            success:function(data)
-            {
-                window.location.href="newdeal_view";
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-    );
-}
+function verificationDeal($monOffreCliquee, $maDemandeCliquee, $sonOffreCliquee, $saDemandeCliquee)
 
 
 
