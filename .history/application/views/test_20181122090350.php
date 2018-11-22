@@ -8,9 +8,9 @@
     <title>Test</title><br><br><br>
 </head>
 <body>
-    <?php 
-        echo var_dump($_SESSION["monOffreEgalSaDemande"]);
-    ?>
+
+      <?php  echo var_dump($_SESSION["monOffreEgalSaDemande"]); ?> <br> <br>
+   
     
 </body>
 </html>

@@ -296,35 +296,10 @@ function adDemande_view(){
     $maDemandeCliquee = $_POST['maDemandeCliquee'];
     $sonOffreCliquee = $_POST['sonOffreCliquee'];
     $saDemandeCliquee = $_POST['saDemandeCliquee'];
-
-    $deal=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
-      'idOffreUser1'=>$monOffreCliquee,
-      'idOffreUser2'=>$saDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
-  
-      ); 
-
-    $deal2=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
-      'idOffreUser1'=>$sonOffreCliquee,
-      'idOffreUser2'=>$maDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
-      );   
-
     $this->load->model("modelDeals");
     $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee);
     if ($_SESSION["verificationFinale"] == true){
-      $this->modelDeals->insererDeal($deal);
-      $this->modelDeals->insererDeal($deal2);
+      $this->modelDeals->insererDeal();
       $this->session->set_flashdata('success_msg', "Création du deal réussie ! Vous pouvez retourner le visualiser sur la page d'accueil");
     } else {
       $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, essayez à nouveau.");

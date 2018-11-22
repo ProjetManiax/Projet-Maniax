@@ -10,7 +10,7 @@ class modelDeals extends CI_model{
         return $sql->result();
     }
 
-    function verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){
+    function verifMonOffreSaDemande($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){
         $sql = $this->db->query("select idService as test from offre WHERE idOffre =".$monOffreCliquee);
         $sql2 = $this->db->query("select idService as test from demande WHERE idDemande =".$saDemandeCliquee);     
         $sql3 = $this->db->query("select idService as test2 from offre WHERE idOffre =".$sonOffreCliquee);
@@ -22,9 +22,6 @@ class modelDeals extends CI_model{
         }
         return false;
     }
-
-
- //   INSERT INTO `deal` (`idDeal`, `dateDeal`, `noteUser1`, `noteUser2`, `idOffreUser1`, `idOffreUser2`, `idEtat`, `idCreateur`) VALUES (NULL, '2018-11-05', '0', '0', '19', '19', '1', '3');
 
 }
 

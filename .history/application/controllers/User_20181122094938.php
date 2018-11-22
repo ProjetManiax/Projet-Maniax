@@ -304,20 +304,14 @@ function adDemande_view(){
       'noteUser2'=>0,
       'idOffreUser1'=>$monOffreCliquee,
       'idOffreUser2'=>$saDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
   
       ); 
 
     $deal2=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
+
       'idOffreUser1'=>$sonOffreCliquee,
       'idOffreUser2'=>$maDemandeCliquee,
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
+  
       );   
 
     $this->load->model("modelDeals");

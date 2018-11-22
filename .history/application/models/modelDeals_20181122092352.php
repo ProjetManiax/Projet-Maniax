@@ -23,9 +23,6 @@ class modelDeals extends CI_model{
         return false;
     }
 
-
- //   INSERT INTO `deal` (`idDeal`, `dateDeal`, `noteUser1`, `noteUser2`, `idOffreUser1`, `idOffreUser2`, `idEtat`, `idCreateur`) VALUES (NULL, '2018-11-05', '0', '0', '19', '19', '1', '3');
-
 }
 
 ?>
