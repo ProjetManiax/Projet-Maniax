@@ -16,7 +16,7 @@ class modelDeals extends CI_model{
     }
 
     function getNomService2($idDeal){
-        $sql = $this->db->query("select nomService from deal inner join offre on idOffreUser1 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idDeal =".$idDeal);
+        $sql = $this->db->query("select nomService as 'nomService2' from deal inner join offre on idOffreUser1 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idDeal =".$idDeal);
         return $sql->result();
     }
 

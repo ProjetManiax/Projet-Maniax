@@ -41,11 +41,11 @@
 
                         <div class="form-group">
                         <label>VOTRE SERVICE</label>
-                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo $_SESSION['nomService'][0]->nomService ?>" readonly="readonly">
+                            <input class="form-control"  name="descriptionService1" type="text" value="" readonly="readonly">
                         </div>
 
                         <div class="form-group">
-                        <label>SERVICE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label>
+                        <label>SERVICE DE : <?php echo $_SESSION['deal'][0]->nomUser ?></label>
                             <input class="form-control" name="descriptionService2" type="text" value="<?php echo $_SESSION['deal'][0]->nomService ?>" readonly="readonly">
                         </div>
 
@@ -55,7 +55,7 @@
                         </div>
                         
                         <div class="form-group">
-                        <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label><br>
+                        <label>LA NOTE DE : <?php echo $_SESSION['deal'][0]->nomUser ?></label><br>
                         <input class="form-control" name="saNote" type="number" value="<?php echo $_SESSION['deal'][0]->noteUser2 ?>" readonly="readonly"> 
                         </div><br>
                  

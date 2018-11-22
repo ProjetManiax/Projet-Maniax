@@ -41,7 +41,7 @@
 
                         <div class="form-group">
                         <label>VOTRE SERVICE</label>
-                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo $_SESSION['nomService'][0]->nomService ?>" readonly="readonly">
+                            <input class="form-control"  name="descriptionService1" type="text" value="" readonly="readonly">
                         </div>
 
                         <div class="form-group">

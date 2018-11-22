@@ -291,7 +291,7 @@ function adDemande_view(){
     $idDeal = $_POST['idDeal'];
     $this->load->model("modelDeals");
     $_SESSION['deal']=$this->modelDeals->getInfosDeal($idDeal);
-    $_SESSION["nomService"]=$this->modelDeals->getNomService2($idDeal);
+    $_SeSSION["nomService"]=$this->modelDeals->getNomService($idDeal);
     $this->load->view('setDeal.php',$data);
   }
   
