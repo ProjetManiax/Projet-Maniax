@@ -308,7 +308,7 @@ function adDemande_view(){
   
     if(!empty($deal)){
       $this->load->model("modelDeals");
-      $this->modelDeals->set_deal($idDeal,$deal);
+      $this->modelDemandes->set_deal($idDeal,$deal);
       $this->session->set_flashdata('success_msg', "Notation du deal réussie ! Vous pouvez retourner la visualiser sur la page d'accueil");
       redirect('user/setDeal_view');
     }

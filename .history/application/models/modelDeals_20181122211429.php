@@ -22,7 +22,7 @@ class modelDeals extends CI_model{
 
     function set_deal($idDeal,$deal){
         $this->db->where('idDeal', $idDeal);
-        $this->db->update('deal', $deal);
+        $this->db->update('demande', $deal);
     }
 
     function verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){
