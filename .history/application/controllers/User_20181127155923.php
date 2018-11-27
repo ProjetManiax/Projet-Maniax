@@ -329,7 +329,7 @@ function adDemande_view(){
     'monOffreCliquee' => $_POST['monOffreCliquee'],
     'maDemandeCliquee' => $_POST['maDemandeCliquee'],
     'sonOffreCliquee' => $_POST['sonOffreCliquee'],
-    'saDemandeCliquee' => $_POST['saDemandeCliquee'],
+    'saDemandeCliquee' => $_POST['saDemandeCliquee']
     );
 
     echo var_dump($lesIds);
@@ -339,14 +339,15 @@ function adDemande_view(){
       'dateDeal'=>date("Y-m-d"),
       'noteUser1'=>0,
       'noteUser2'=>0,
-      'idOffreUser1'=>$_POST['monOffreCliquee'],
-      'idOffreUser2'=>$_POST['saDemandeCliquee'],
+      'idOffreUser1'=>$lesIds['monOffreCliquee'],
+      'idOffreUser2'=>$lesIds['saDemandeCliquee'],
       'idEtat'=>1,
       'idCreateur'=>$_SESSION['idUser'],
   
       ); 
 
-      echo var_dump($deal);
+    var_dump($deal);
+
     // $deal2=array(
     //   'idDeal'=>null,
     //   'dateDeal'=>date("Y-m-d"),
@@ -359,7 +360,7 @@ function adDemande_view(){
     //   );   
 
     $this->load->model("modelDeals");
-    $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($_POST['monOffreCliquee'], $_POST['saDemandeCliquee'], $_POST['sonOffreCliquee'],  $_POST['maDemandeCliquee']);
+    $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($lesIds['monOffreCliquee'], $lesIds['saDemandeCliquee'], $lesIds['sonOffreCliquee'], $lesIds['maDemandeCliquee']);
     if ($_SESSION["verificationFinale"] == true){
       $this->modelDeals->insererDeal($deal);
     //  $this->modelDeals->insererDeal($deal2);

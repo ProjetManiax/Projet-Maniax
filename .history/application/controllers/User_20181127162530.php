@@ -334,19 +334,19 @@ function adDemande_view(){
 
     echo var_dump($lesIds);
 
-    $deal=array(
-      'idDeal'=>null,
-      'dateDeal'=>date("Y-m-d"),
-      'noteUser1'=>0,
-      'noteUser2'=>0,
-      'idOffreUser1'=>$_POST['monOffreCliquee'],
-      'idOffreUser2'=>$_POST['saDemandeCliquee'],
-      'idEtat'=>1,
-      'idCreateur'=>$_SESSION['idUser'],
+    // $deal=array(
+    //   'idDeal'=>null,
+    //   'dateDeal'=>date("Y-m-d"),
+    //   'noteUser1'=>0,
+    //   'noteUser2'=>0,
+    //   'idOffreUser1'=>$monOffreCliquee,
+    //   'idOffreUser2'=>$saDemandeCliquee,
+    //   'idEtat'=>1,
+    //   'idCreateur'=>$_SESSION['idUser'],
   
-      ); 
+    //   ); 
 
-      echo var_dump($deal);
+
     // $deal2=array(
     //   'idDeal'=>null,
     //   'dateDeal'=>date("Y-m-d"),

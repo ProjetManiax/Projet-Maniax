@@ -25,10 +25,6 @@ class modelDeals extends CI_model{
         $this->db->update('deal', $deal);
     }
 
-    public function insererDeal($deal){
-        $this->db->insert('deal', $deal);
-    }
-
     function verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){
         $sql = $this->db->query("select idService as test from offre WHERE idOffre =".$monOffreCliquee);
         $sql2 = $this->db->query("select idService as test from demande WHERE idDemande =".$saDemandeCliquee);     
