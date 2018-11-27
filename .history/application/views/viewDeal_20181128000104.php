@@ -81,9 +81,7 @@
             <span class="input-group-text">Rechercher</span>
         </div>
         <input type="text" id="recherche" class="form-control" value="" placeholder="Saisie le texte recherché dans une offre"><br>     
-    </div>
-<section class="container-fluid">
-<?php
+        <?php
         $success_msg= $this->session->flashdata('success_msg');
         $error_msg= $this->session->flashdata('error_msg');
         if($success_msg){
@@ -100,7 +98,9 @@
         </div>
         <?php
         }
-?>
+        ?>
+    </div>
+<section class="container-fluid">
     <div class="row">
         <div class="col-md-5">
             <div>

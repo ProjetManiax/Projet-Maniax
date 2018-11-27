@@ -140,25 +140,30 @@ function getNom($id)
         );
 }
 
-function verificationDeal(lesClicks)
+function verificationDeal($lesClicks)
 {   
+    $monOffreCliquee = $lesClicks[0];
+    $maDemandeCliquee = $lesClicks[1];
+    $sonOffreCliquee = $lesClicks[2];
+    $saDemandeCliquee = $lesClicks[3];
 
-    $.ajax(
-        {
-            async: true,
-            type:"post",
-            url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+lesClicks[0]+"&maDemandeCliquee="+lesClicks[1]+"&sonOffreCliquee="+lesClicks[2]+"&saDemandeCliquee="+lesClicks[3],
-            success:function(data)
-            {
-                window.location.href="newdeal_view";
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-    );
+    alert($maDemandeCliquee);
+    // $.ajax(
+    //     {
+    //         async: true,
+    //         type:"post",
+    //         url:"getIdOffresDemandesClicked",
+    //         data:"monOffreCliquee="+$monOffreCliquee+"&maDemandeCliquee="+$maDemandeCliquee+"&sonOffreCliquee="+$sonOffreCliquee+"&saDemandeCliquee="+$saDemandeCliquee,
+    //         success:function(data)
+    //         {
+    //             window.location.href="newdeal_view";
+    //         },
+    //         error:function()
+    //         {
+    //             alert('Erreur SQL');
+    //         }
+    //     }
+    // );
 }
 
 

@@ -141,11 +141,16 @@ function getNom($id)
 }
 
 function verificationDeal(lesClicks)
-{   
+{   ////monOffreCliquee = lesClicks[0];
+    //maDemandeCliquee = lesClicks[1];
+    //sonOffreCliquee = lesClicks[2];
+    //saDemandeCliquee = lesClicks[3];
+
+    //alert(monOffreCliquee);
+
 
     $.ajax(
         {
-            async: true,
             type:"post",
             url:"getIdOffresDemandesClicked",
             data:"monOffreCliquee="+lesClicks[0]+"&maDemandeCliquee="+lesClicks[1]+"&sonOffreCliquee="+lesClicks[2]+"&saDemandeCliquee="+lesClicks[3],

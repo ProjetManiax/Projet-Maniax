@@ -141,14 +141,20 @@ function getNom($id)
 }
 
 function verificationDeal(lesClicks)
-{   
+{   ////monOffreCliquee = lesClicks[0];
+    //maDemandeCliquee = lesClicks[1];
+    //sonOffreCliquee = lesClicks[2];
+    //saDemandeCliquee = lesClicks[3];
+
+    alert(lesClicks[0] + lesClicks[2]);
+    //alert(monOffreCliquee);
+
 
     $.ajax(
         {
-            async: true,
             type:"post",
             url:"getIdOffresDemandesClicked",
-            data:"monOffreCliquee="+lesClicks[0]+"&maDemandeCliquee="+lesClicks[1]+"&sonOffreCliquee="+lesClicks[2]+"&saDemandeCliquee="+lesClicks[3],
+            data:"monOffreCliquee="+monOffreCliquee+"&maDemandeCliquee="+maDemandeCliquee+"&sonOffreCliquee="+sonOffreCliquee+"&saDemandeCliquee="+saDemandeCliquee,
             success:function(data)
             {
                 window.location.href="newdeal_view";

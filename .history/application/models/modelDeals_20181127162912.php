@@ -29,23 +29,15 @@ class modelDeals extends CI_model{
         $this->db->insert('deal', $deal);
     }
 
-    function verificationFinale($monOffreCliquee, $maDemandeCliquee, $sonOffreCliquee, $saDemandeCliquee){
+    function verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee){
         $sql = $this->db->query("select idService as test from offre WHERE idOffre =".$monOffreCliquee);
         $sql2 = $this->db->query("select idService as test from demande WHERE idDemande =".$saDemandeCliquee);     
         $sql3 = $this->db->query("select idService as test2 from offre WHERE idOffre =".$sonOffreCliquee);
         $sql4 = $this->db->query("select idService as test2 from demande WHERE idDemande =".$maDemandeCliquee);  
         if($sql->result()[0]->test == $sql2->result()[0]->test && $sql3->result()[0]->test2 == $sql4->result()[0]->test2){
-            return "ok";
+            return true;
         }
-        elseif ($sql->result()[0]->test != $sql2->result()[0]->test && $sql3->result()[0]->test2 == $sql4->result()[0]->test2){
-            return "monOffreSaDemande";
-        }
-        elseif ($sql->result()[0]->test == $sql2->result()[0]->test && $sql3->result()[0]->test2 != $sql4->result()[0]->test2){
-            return "sonOffreMaDemande";
-        }
-        elseif ($sql->result()[0]->test != $sql2->result()[0]->test && $sql3->result()[0]->test2 != $sql4->result()[0]->test2){
-            return "all";
-        }
+        return false;
     }
 
 }

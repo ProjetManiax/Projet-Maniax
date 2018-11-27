@@ -143,6 +143,7 @@ function getNom($id)
 function verificationDeal(lesClicks)
 {   
 
+
     $.ajax(
         {
             async: true,

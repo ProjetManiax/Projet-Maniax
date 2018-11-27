@@ -324,6 +324,10 @@ function adDemande_view(){
 
 
   function getIdOffresDemandesClicked(){
+    $monOffreCliquee = $_POST['monOffreCliquee'];
+    $maDemandeCliquee = $_POST['maDemandeCliquee'];
+    $sonOffreCliquee = $_POST['sonOffreCliquee'];
+    $saDemandeCliquee = $_POST['saDemandeCliquee'];
 
     $lesIds=array(
     'monOffreCliquee' => $_POST['monOffreCliquee'],
@@ -332,33 +336,38 @@ function adDemande_view(){
     'saDemandeCliquee' => $_POST['saDemandeCliquee'],
     );
 
-    echo var_dump($lesIds);
-
     $deal=array(
       'idDeal'=>null,
       'dateDeal'=>date("Y-m-d"),
       'noteUser1'=>0,
       'noteUser2'=>0,
-      'idOffreUser1'=>$_POST['monOffreCliquee'],
-      'idOffreUser2'=>$_POST['sonOffreCliquee'],
+      'idOffreUser1'=>$monOffreCliquee,
+      'idOffreUser2'=>$saDemandeCliquee,
       'idEtat'=>1,
       'idCreateur'=>$_SESSION['idUser'],
   
       ); 
+    var_dump($deal);
 
-      echo var_dump($deal);
-       
+    // $deal2=array(
+    //   'idDeal'=>null,
+    //   'dateDeal'=>date("Y-m-d"),
+    //   'noteUser1'=>0,
+    //   'noteUser2'=>0,
+    //   'idOffreUser1'=>$sonOffreCliquee,
+    //   'idOffreUser2'=>$maDemandeCliquee,
+    //   'idEtat'=>1,
+    //   'idCreateur'=>$_SESSION['idUser'],
+    //   );   
+
     $this->load->model("modelDeals");
-    $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($_POST['monOffreCliquee'], $_POST['maDemandeCliquee'], $_POST['sonOffreCliquee'],  $_POST['saDemandeCliquee']);
-    if ($_SESSION["verificationFinale"] == "ok"){
+    $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($monOffreCliquee, $saDemandeCliquee, $sonOffreCliquee, $maDemandeCliquee);
+    if ($_SESSION["verificationFinale"] == true){
       $this->modelDeals->insererDeal($deal);
+    //  $this->modelDeals->insererDeal($deal2);
       $this->session->set_flashdata('success_msg', "Création du deal réussie ! Vous pouvez retourner le visualiser sur la page d'accueil");
-    } elseif ($_SESSION["verificationFinale"] == "monOffreSaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Votre demande ne correspond pas à l’offre de l’utilisateur sélectionné");
-    } elseif ($_SESSION["verificationFinale"] == "sonOffreMaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, La demande de l’utilisateur sélectionné ne correspond pas à votre offre");
-    } elseif ($_SESSION["verificationFinale"] == "all") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Ni votre offre, ni votre demande ne correspondent à l'offre et à la demande de l'utilisateur selectionné");
+    } else {
+      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, essayez à nouveau.");
     }
   }
 }

@@ -67,6 +67,7 @@
                         lesClicks.push($(this).attr("value"))
                         }
                     })
+                    alert(lesClicks);
                     verificationDeal(lesClicks);
                 });
 
@@ -75,7 +76,25 @@
     </script>
 </head>
 <body>
+<?php
+$success_msg= $this->session->flashdata('success_msg');
+$error_msg= $this->session->flashdata('error_msg');
 
+if($success_msg){
+?>
+<div class="alert alert-success">
+    <?php echo $success_msg; ?>
+</div>
+<?php
+}
+if($error_msg){
+?>
+<div class="alert alert-danger">
+    <?php echo $error_msg; ?>
+</div>
+<?php
+}
+?>
     <div class=" container-fluid input-group mb-3 input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text">Rechercher</span>
@@ -83,24 +102,6 @@
         <input type="text" id="recherche" class="form-control" value="" placeholder="Saisie le texte recherché dans une offre"><br>     
     </div>
 <section class="container-fluid">
-<?php
-        $success_msg= $this->session->flashdata('success_msg');
-        $error_msg= $this->session->flashdata('error_msg');
-        if($success_msg){
-        ?>
-        <div class="alert alert-success">
-            <?php echo $success_msg; ?>
-        </div>
-        <?php
-        }
-        if($error_msg){
-        ?>
-        <div class="alert alert-danger">
-            <?php echo $error_msg; ?>
-        </div>
-        <?php
-        }
-?>
     <div class="row">
         <div class="col-md-5">
             <div>

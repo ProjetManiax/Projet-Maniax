@@ -354,11 +354,7 @@ function adDemande_view(){
       $this->modelDeals->insererDeal($deal);
       $this->session->set_flashdata('success_msg', "Création du deal réussie ! Vous pouvez retourner le visualiser sur la page d'accueil");
     } elseif ($_SESSION["verificationFinale"] == "monOffreSaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Votre demande ne correspond pas à l’offre de l’utilisateur sélectionné");
-    } elseif ($_SESSION["verificationFinale"] == "sonOffreMaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, La demande de l’utilisateur sélectionné ne correspond pas à votre offre");
-    } elseif ($_SESSION["verificationFinale"] == "all") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Ni votre offre, ni votre demande ne correspondent à l'offre et à la demande de l'utilisateur selectionné");
+      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, essayez à nouveau.");
     }
   }
 }
