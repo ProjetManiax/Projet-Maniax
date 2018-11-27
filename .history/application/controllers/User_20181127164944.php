@@ -339,8 +339,8 @@ function adDemande_view(){
       'dateDeal'=>date("Y-m-d"),
       'noteUser1'=>0,
       'noteUser2'=>0,
-      'idOffreUser1'=>$_POST['monOffreCliquee'],
-      'idOffreUser2'=>$_POST['sonOffreCliquee'],
+      'idOffreUser1'=>$_POST['saDemandeCliquee'],
+      'idOffreUser2'=>$_POST['monOffreCliquee'],
       'idEtat'=>1,
       'idCreateur'=>$_SESSION['idUser'],
   
