@@ -350,15 +350,11 @@ function adDemande_view(){
        
     $this->load->model("modelDeals");
     $_SESSION["verificationFinale"] = $this->modelDeals->verificationFinale($_POST['monOffreCliquee'], $_POST['maDemandeCliquee'], $_POST['sonOffreCliquee'],  $_POST['saDemandeCliquee']);
-    if ($_SESSION["verificationFinale"] == "ok"){
+    if ($_SESSION["verificationFinale"] == true){
       $this->modelDeals->insererDeal($deal);
       $this->session->set_flashdata('success_msg', "Création du deal réussie ! Vous pouvez retourner le visualiser sur la page d'accueil");
-    } elseif ($_SESSION["verificationFinale"] == "monOffreSaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Votre demande ne correspond pas à l’offre de l’utilisateur sélectionné");
-    } elseif ($_SESSION["verificationFinale"] == "sonOffreMaDemande") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, La demande de l’utilisateur sélectionné ne correspond pas à votre offre");
-    } elseif ($_SESSION["verificationFinale"] == "all") {
-      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, Ni votre offre, ni votre demande ne correspondent à l'offre et à la demande de l'utilisateur selectionné");
+    } else {
+      $this->session->set_flashdata('error_msg', "Erreur lors de la création du deal, essayez à nouveau.");
     }
   }
 }
