@@ -114,6 +114,11 @@
         <br>
         <div id="divMesDeals" class="row align-items-center">
         <?php foreach($lesDeals as $unDeal){
+                echo var_dump($unDeal) ;
+            
+            }
+        ?><br>
+        <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
             <div name="mycard" alt="<?php echo $unDeal['etat'] ;?>" class="card text-white bg-success mb-3" style="width: auto; ">

@@ -293,13 +293,7 @@ function adDemande_view(){
     $this->load->model("modelDeals");
     $_SESSION['deal']=$this->modelDeals->getInfosDeal($idDeal);
     $_SESSION["nomService"]=$this->modelDeals->getNomService2($idDeal);
-    $_SESSION["createur"]=$this->modelDeals->estCreateur($idDeal, $_SESSION['idUser']);
-    if ($_SESSION["createur"] == true){
-
-        $this->load->view('setDealCreateur.php',$data);
-    }else{
-        $this->load->view('setDeal.php',$data);
-    }
+    $this->load->view('setDeal.php',$data);
   }
 
   public function set_deal(){
@@ -325,12 +319,9 @@ function adDemande_view(){
   }
   
   public function setDeal_view(){
-    if ($_SESSION["createur"] == true){
-      $this->load->view('setDealCreateur.php',$_SESSION['deal']);
-    }else{
-      $this->load->view('setDeal.php',$_SESSION['deal']);
-    }
+    $this->load->view('setDeal.php',$_SESSION['deal']);
   }
+
 
   function getIdOffresDemandesClicked(){
 
