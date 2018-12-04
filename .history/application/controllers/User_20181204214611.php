@@ -33,7 +33,6 @@ public function home(){
     $data["lesDemandes"]=$this->modelDemandes->getAllDemandesByIdUser($_SESSION['idUser']);
     $this->load->model("modelDeals");
     $data["lesDeals"]=$this->modelDeals->GetAllDealsByIdUser($_SESSION['idUser']);
-    $_SESSION["lesDeals"]=$this->modelDeals->GetAllDealsByIdUser($_SESSION['idUser']);
     $this->load->view("viewAccueil.php",$data);
   }
   else{
@@ -291,7 +290,6 @@ function adDemande_view(){
 
   public function getDealByIdDeal(){
     $idDeal = $_POST['idDeal'];
-    $_SESSION["idDeal"]= $idDeal;
     $this->load->model("modelDeals");
     $_SESSION['deal']=$this->modelDeals->GetAllDealsByIdUser($_SESSION['idUser']);
     $_SESSION["createur"]=$this->modelDeals->estCreateur($idDeal, $_SESSION['idUser']);
@@ -321,9 +319,9 @@ function adDemande_view(){
   
   public function setDeal_view(){
     if ($_SESSION["createur"] == true){
-      $this->load->view('setDealCreateur.php',$_SESSION['lesDeals'],$_SESSION['idDeal']);
+      $this->load->view('setDealCreateur.php',$_SESSION['lesDeals']);
     }else{
-      $this->load->view('setDeal.php',$_SESSION['lesDeals'],$_SESSION['idDeal']);
+      $this->load->view('setDeal.php',$_SESSION['lesDeals']);
     }
   }
 

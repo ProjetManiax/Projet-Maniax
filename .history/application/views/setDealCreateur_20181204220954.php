@@ -51,12 +51,12 @@
 
                         <div class="form-group">
                         <label>VOTRE NOTE</label><br>
-                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser1'])?>" autofocus> 
+                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser2'])?>" autofocus> 
                         </div>
                         
                         <div class="form-group">
                         <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomUser'])?></font></label><br>
-                        <input class="form-control" name="saNote" type="number" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser2'])?>" readonly="readonly"> 
+                        <input class="form-control" name="saNote" type="number" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser1'])?>" readonly="readonly"> 
                         </div><br>
 
                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Modifier" name="register" ><br>
@@ -67,6 +67,7 @@
             </div>
             <div class='col-sm-6'><br>
             <img class="card-img-top" src="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['photoUser'])?>" alt="Card image cap"><br>&nbsp;
+            <?php echo var_dump($_SESSION['lesDeals'][$_SESSION['idDeal']])?>
             </div>
     </div>
     &nbsp;<br>

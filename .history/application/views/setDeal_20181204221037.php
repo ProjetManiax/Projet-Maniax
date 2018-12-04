@@ -41,12 +41,12 @@
 
                         <div class="form-group">
                         <label>VOTRE SERVICE</label>
-                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser1'])?>" readonly="readonly">
+                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser2'])?>" readonly="readonly">
                         </div>
 
                         <div class="form-group">
                         <label>SERVICE DE : <font style="text-transform: uppercase;"><?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomUser'])?></font></label>
-                            <input class="form-control" name="descriptionService2" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser2'])?>" readonly="readonly">
+                            <input class="form-control" name="descriptionService2" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser1'])?>" readonly="readonly">
                         </div>
 
                         <div class="form-group">

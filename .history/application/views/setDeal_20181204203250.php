@@ -36,28 +36,30 @@
                     <fieldset>
                         <div class="form-group">
                         <label>NUMERO DU DEAL</label>
-                            <input class="form-control" name="idDeal" type="text" value='<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['idDeal'])?>' readonly="readonly">
+                            <input class="form-control" name="idDeal" type="text" value='<?php echo $_SESSION['deal'][0]->idDeal ;?>' readonly="readonly">
                         </div>
 
                         <div class="form-group">
                         <label>VOTRE SERVICE</label>
-                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser1'])?>" readonly="readonly">
+                            <input class="form-control"  name="descriptionService1" type="text" value="<?php echo $_SESSION['nomService'][0]->nomService ?>" readonly="readonly">
                         </div>
 
                         <div class="form-group">
-                        <label>SERVICE DE : <font style="text-transform: uppercase;"><?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomUser'])?></font></label>
-                            <input class="form-control" name="descriptionService2" type="text" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomServiceUser2'])?>" readonly="readonly">
+                        <label>SERVICE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label>
+                            <input class="form-control" name="descriptionService2" type="text" value="<?php echo $_SESSION['deal'][0]->nomService ?>" readonly="readonly">
                         </div>
 
                         <div class="form-group">
                         <label>VOTRE NOTE</label><br>
-                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser1'])?>" autofocus> 
+                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php echo $_SESSION['deal'][0]->noteUser1 ?>" autofocus> 
                         </div>
                         
                         <div class="form-group">
-                        <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['nomUser'])?></font></label><br>
-                        <input class="form-control" name="saNote" type="number" value="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['noteUser2'])?>" readonly="readonly"> 
+                        <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label><br>
+                        <input class="form-control" name="saNote" type="number" value="<?php echo $_SESSION['deal'][0]->noteUser2 ?>" readonly="readonly"> 
                         </div><br>
+                 
+                        <?php // var_dump($_SESSION['createur']) ; ?>
 
                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Modifier" name="register" ><br>
 
@@ -66,7 +68,7 @@
                         <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
             </div>
             <div class='col-sm-6'><br>
-            <img class="card-img-top" src="<?php echo ($_SESSION['lesDeals'][$_SESSION['idDeal']]['photoUser'])?>" alt="Card image cap"><br>&nbsp;
+            <img class="card-img-top" src="<?php echo $_SESSION['deal'][0]->photoUser ?>" alt="Card image cap"><br>&nbsp;
             </div>
     </div>
     &nbsp;<br>

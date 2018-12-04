@@ -61,7 +61,7 @@
                         <a href="home"><button class="btn btn-lg btn-primary btn-block" href="home" value="Home" name="home" >Home</button></a>
             </div>
             <div class='col-sm-6'><br>
-            <img class="card-img-top" src="<?php echo $_SESSION['demande'][0]->photoService ?>" alt="Card image cap"><br>&nbsp;
+            <img class="card-img-top" src="<?php echo $_SESSION['demande'][0]->photoService ?>" alt="Card image cap"><br>
             </div>
     </div>
 </div>

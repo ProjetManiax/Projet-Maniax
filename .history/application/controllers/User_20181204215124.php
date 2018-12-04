@@ -321,9 +321,9 @@ function adDemande_view(){
   
   public function setDeal_view(){
     if ($_SESSION["createur"] == true){
-      $this->load->view('setDealCreateur.php',$_SESSION['lesDeals'],$_SESSION['idDeal']);
+      $this->load->view('setDealCreateur.php',$_SESSION['lesDeals']);
     }else{
-      $this->load->view('setDeal.php',$_SESSION['lesDeals'],$_SESSION['idDeal']);
+      $this->load->view('setDeal.php',$_SESSION['lesDeals']);
     }
   }
 
