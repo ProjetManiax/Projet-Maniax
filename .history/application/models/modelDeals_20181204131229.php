@@ -1,16 +1,6 @@
 <?php
 class modelDeals extends CI_model{
 
-    function estCreateur($idDeal, $idUser){
-        $sql = $this->db->query("select idCreateur as createur from deal where idDeal =".$idDeal);
-        if($sql->result()[0]->createur == $idUser){
-            return true;
-        }
-        else {
-            return false;
-        };
-    }
-
     function getInfosDeal($idDeal){
         $sql = $this->db->query("select nomUser, photoUser, nomService, idDeal, dateDeal, idEtat, noteUser1, noteUser2, idEtat from deal inner join offre on idOffreUser2 = idOffre inner join service on service.idService = offre.idService inner join user on user.idUser = offre.idUser where idDeal =".$idDeal);
         return $sql->result();

@@ -58,8 +58,6 @@
                         <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label><br>
                         <input class="form-control" name="saNote" type="number" value="<?php echo $_SESSION['deal'][0]->noteUser2 ?>" readonly="readonly"> 
                         </div><br>
-                 
-                        <?php // var_dump($_SESSION['createur']) ; ?>
 
                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Modifier" name="register" ><br>
 

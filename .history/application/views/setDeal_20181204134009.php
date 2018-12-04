@@ -51,15 +51,14 @@
 
                         <div class="form-group">
                         <label>VOTRE NOTE</label><br>
-                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php echo $_SESSION['deal'][0]->noteUser1 ?>" autofocus> 
+                        <input class="form-control" name="maNote" type="number" min="1" max="10" value="<?php /* echo $_SESSION['deal'][0]->noteUser2*/ ?>" autofocus> 
                         </div>
                         
                         <div class="form-group">
                         <label>LA NOTE DE : <font style="text-transform: uppercase;"><?php echo $_SESSION['deal'][0]->nomUser ?></font></label><br>
-                        <input class="form-control" name="saNote" type="number" value="<?php echo $_SESSION['deal'][0]->noteUser2 ?>" readonly="readonly"> 
+                        <input class="form-control" name="saNote" type="number" value="<?php /*echo $_SESSION['deal'][0]->noteUser1*/ ?>" readonly="readonly"> 
                         </div><br>
                  
-                        <?php // var_dump($_SESSION['createur']) ; ?>
 
                         <input class="btn btn-lg btn-success btn-block" type="submit" value="Modifier" name="register" ><br>
 

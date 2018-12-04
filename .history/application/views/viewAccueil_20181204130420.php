@@ -114,6 +114,11 @@
         <br>
         <div id="divMesDeals" class="row align-items-center">
         <?php foreach($lesDeals as $unDeal){
+                echo var_dump($unDeal) ;
+            
+            }
+        ?><br>
+        <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
             <div name="mycard" alt="<?php echo $unDeal['etat'] ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
@@ -125,7 +130,7 @@
                         <h5><?php echo $unDeal['nomServiceUser2'] ?></h5>
                         <h5><?php echo $unDeal['dateDeal'] ?></h5>
                         <h5><?php echo $unDeal['noteUser1'] ?> - <?php echo $unDeal['noteUser2'] ?></h5>
-                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal['idDeal'] ?>">Afficher</button>
+                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal->idDeal ?>">Afficher</button>
                     </div>
                     <script>
                     </script>

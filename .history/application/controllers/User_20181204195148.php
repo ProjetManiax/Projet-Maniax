@@ -325,12 +325,9 @@ function adDemande_view(){
   }
   
   public function setDeal_view(){
-    if ($_SESSION["createur"] == true){
-      $this->load->view('setDealCreateur.php',$_SESSION['deal']);
-    }else{
-      $this->load->view('setDeal.php',$_SESSION['deal']);
-    }
+    $this->load->view('setDeal.php',$_SESSION['deal']);
   }
+
 
   function getIdOffresDemandesClicked(){
 

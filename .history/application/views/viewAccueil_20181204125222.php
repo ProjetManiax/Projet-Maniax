@@ -114,18 +114,23 @@
         <br>
         <div id="divMesDeals" class="row align-items-center">
         <?php foreach($lesDeals as $unDeal){
+                echo var_dump($unDeal) ;
+            
+            }
+        ?><br>
+        <?php foreach($lesDeals as $unDeal){
                 ?><br>
             <div class='col-md-4'>
-            <div name="mycard" alt="<?php echo $unDeal['etat'] ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
-                <img class="card-img-top" src="<?php echo $unDeal['photoUser'] ?>" alt="Card image cap">
+            <div name="mycard" alt="<?php echo $unDeal->idEtat ;?>" class="card text-white bg-success mb-3" style="width: auto; ">
+                <img class="card-img-top" src="<?php echo $unDeal->photoUser ?>" alt="Card image cap">
                     <div class="card-body" align='center'>
-                        <h3 class="card-title"><?php echo $unDeal['nomUser'] ?></h3>
-                        <h5><?php echo $unDeal['nomServiceUser1'] ?></h5>
+                        <h3 class="card-title"><?php echo $unDeal->nomUser ?></h3>
+                        <h5><?php echo $nomService[0]->nomService2 ?></h5>
                         <h5>vs<h5>
-                        <h5><?php echo $unDeal['nomServiceUser2'] ?></h5>
-                        <h5><?php echo $unDeal['dateDeal'] ?></h5>
-                        <h5><?php echo $unDeal['noteUser1'] ?> - <?php echo $unDeal['noteUser2'] ?></h5>
-                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal['idDeal'] ?>">Afficher</button>
+                        <h5><?php echo $unDeal->nomService ?></h5>
+                        <h5><?php echo $unDeal->dateDeal ?></h5>
+                        <h5><?php echo $unDeal->noteUser1 ?> - <?php echo $unDeal->noteUser2 ?></h5>
+                        <button name="deal" class="btn btn-primary lg" value="<?php echo $unDeal->idDeal ?>">Afficher</button>
                     </div>
                     <script>
                     </script>
