@@ -25,6 +25,11 @@ class modelDeals extends CI_model{
         $this->db->where('idDeal', $idDeal);
         $this->db->update('deal', $deal);
     }
+    
+    function change_dealColor($idDeal,$dealColor){
+        $this->db->where('idDeal', $idDeal);
+        $this->db->update('deal', $dealColor);
+    }
 
     public function insererDeal($deal){
         $this->db->insert('deal', $deal);

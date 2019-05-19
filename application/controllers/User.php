@@ -5,8 +5,13 @@ class User extends CI_Controller {
 public function __construct(){
 
         parent::__construct();
-  			$this->load->helper('url');
-  	 		$this->load->model('user_model');
+  		$this->load->helper('url');
+        $this->load->model('modelDeals');
+        $this->load->model('modelDemandes');
+        $this->load->model('modelOffres');
+        $this->load->model('modelServices');
+        $this->load->model('modelUser');
+        $this->load->model('user_model');
         $this->load->library('session');
 
 }
@@ -51,7 +56,6 @@ public function register_user(){
       'photoUser'=>'https://image.noelshack.com/fichiers/2018/34/1/1534754007-newuser.png',
 
         );
-        print_r($user);
 
       $login_check=$this->user_model->login_check($user['login']);
 
@@ -123,7 +127,6 @@ public function register_offre(){
   'idUser'=>$_SESSION['idUser'],
 
     );
-    print_r($offre);
 
   if(!empty($offre)){
     $this->load->model("modelOffres");
@@ -145,7 +148,7 @@ public function set_offre(){
     'dateOffre'=>$this->input->post('dateOffre'),
 
     );
-    print_r($offre);
+
 
     if(!empty($offre)){
     $this->load->model("modelOffres");
@@ -191,7 +194,6 @@ public function register_demande(){
   'idUser'=>$_SESSION['idUser'],
 
     );
-    print_r($demande);
 
     if(!empty($demande)){
     $this->load->model("modelDemandes");
@@ -214,7 +216,6 @@ public function set_demande(){
     'dateDemande'=>$this->input->post('dateDemande'),
 
     );
-    print_r($demande);
 
   if(!empty($demande)){
     $this->load->model("modelDemandes");
@@ -297,7 +298,7 @@ function adDemande_view(){
     $_SESSION["createur"]=$this->modelDeals->estCreateur($idDeal, $_SESSION['idUser']);
   }
 
-  public function set_deal(){
+public function set_deal(){
     $idDeal= $this->input->post('idDeal');
     $deal=array(
   
@@ -305,8 +306,12 @@ function adDemande_view(){
       'noteUser2'=>$this->input->post('maNote'),
   
       );
-      print_r($deal);
-  
+    //echo var_dump(($deal['noteUser1']));die();
+    if(($deal['noteUser1'] && $deal['noteUser2']) != 0){
+      $dealColor=array('idEtat'=>2);
+      $this->modelDeals->change_dealColor($idDeal,$dealColor);
+    }
+
     if(!empty($deal)){
       $this->load->model("modelDeals");
       $this->modelDeals->set_deal($idDeal,$deal);

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='../jQuery/jquery-3.1.1.js'></script>
+    <script src='../JQuery/jquery-3.1.1.js'></script>
     <script src='../js/myFunctions.js'></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/creationDeal.css">

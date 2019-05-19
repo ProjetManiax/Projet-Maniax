@@ -12,6 +12,7 @@
 <div class='container'>
         <h1 align=center>Gestion du deal</h1><br><br>
         <?php
+        ob_start();
               $success_msg= $this->session->flashdata('success_msg');
               $error_msg= $this->session->flashdata('error_msg');
 
@@ -29,6 +30,7 @@
                     </div>
                     <?php
                   }
+                  ob_end_flush();
                   ?>
     <div class='row'>
             <div class='col-sm-6'>
